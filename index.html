@@ -287,33 +287,32 @@ nav.links a:hover::after{ width:100%; }
 .research{ padding:110px var(--edge); border-top:1px solid var(--line); display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; position:relative; }
 .research::before{
   content:''; position:absolute; top:0; left:0; right:0; height:100%;
-  background:radial-gradient(circle at 15% 20%, var(--neon-dim), transparent 55%);
+  background:radial-gradient(circle at 15% 20%, rgba(200,255,77,0.05), transparent 55%);
   pointer-events:none; z-index:0;
 }
 .research-card{
   position:relative; z-index:1;
-  border:1px solid var(--neon); padding:34px;
-  background:linear-gradient(180deg, rgba(0,240,255,0.06), var(--panel) 60%);
-  box-shadow:0 0 0 1px rgba(0,240,255,0.08), 0 20px 60px -20px rgba(0,240,255,0.35), inset 0 1px 0 rgba(0,240,255,0.15);
+  border:1px solid rgba(200,255,77,0.35); padding:34px;
+  background:var(--panel);
+  box-shadow:0 12px 32px -18px rgba(0,0,0,0.5), 0 0 28px -12px rgba(200,255,77,0.25);
   border-radius:2px;
 }
 .research-card .rtag{
-  font-family:var(--font-mono); font-size:0.7rem; color:var(--neon); letter-spacing:0.14em; text-transform:uppercase;
+  font-family:var(--font-mono); font-size:0.7rem; color:var(--lime); letter-spacing:0.14em; text-transform:uppercase;
   display:flex; align-items:center; gap:8px;
 }
 .research-card .rtag::before{
-  content:''; width:7px; height:7px; background:var(--neon); border-radius:1px; box-shadow:0 0 10px var(--neon);
+  content:''; width:7px; height:7px; background:var(--lime); border-radius:1px; box-shadow:0 0 6px rgba(200,255,77,0.6);
 }
 .research-card h4{
   font-family:var(--font-display); font-weight:800; text-transform:uppercase; font-size:1.7rem;
   margin-top:12px; line-height:1.12; color:var(--ink);
-  text-shadow:0 0 24px rgba(0,240,255,0.25);
 }
 .research-card p{ margin-top:16px; color:var(--ink-dim); font-size:0.94rem; line-height:1.65; }
 .research-card .ptopics{ display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
 .research-card .ptopics span{
   font-family:var(--font-mono); font-size:0.7rem; padding:5px 11px;
-  border:1px solid rgba(0,240,255,0.35); color:var(--neon); background:rgba(0,240,255,0.06);
+  border:1px solid rgba(200,255,77,0.25); color:var(--lime-dim); background:rgba(200,255,77,0.04);
   border-radius:100px;
 }
 .certs h5{ font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:18px; }
