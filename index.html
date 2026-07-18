@@ -24,6 +24,8 @@
   --lime-dim:#7c9a3c;
   --flag:#ff5469;
   --blue:#6fb8ff;
+  --neon:#00f0ff;
+  --neon-dim:rgba(0,240,255,0.14);
   --font-display:'Big Shoulders Display', sans-serif;
   --font-body:'Manrope', sans-serif;
   --font-mono:'JetBrains Mono', monospace;
@@ -282,13 +284,38 @@ nav.links a:hover::after{ width:100%; }
 .proj-side .glist li::before{ content:'›'; position:absolute; left:0; color:var(--lime); }
 
 /* ============ RESEARCH / CERTS ============ */
-.research{ padding:110px var(--edge); border-top:1px solid var(--line); display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; }
-.research-card{ border:1px solid var(--line); padding:30px; background:var(--panel); }
-.research-card .rtag{ font-family:var(--font-mono); font-size:0.68rem; color:var(--ink-faint); letter-spacing:0.1em; text-transform:uppercase; }
-.research-card h4{ font-family:var(--font-display); font-weight:800; text-transform:uppercase; font-size:1.5rem; margin-top:10px; line-height:1.15; }
-.research-card p{ margin-top:14px; color:var(--ink-dim); font-size:0.92rem; line-height:1.65; }
-.research-card .ptopics{ display:flex; flex-wrap:wrap; gap:7px; margin-top:18px; }
-.research-card .ptopics span{ font-family:var(--font-mono); font-size:0.68rem; padding:4px 9px; border:1px solid var(--line-soft); color:var(--ink-faint); }
+.research{ padding:110px var(--edge); border-top:1px solid var(--line); display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; position:relative; }
+.research::before{
+  content:''; position:absolute; top:0; left:0; right:0; height:100%;
+  background:radial-gradient(circle at 15% 20%, var(--neon-dim), transparent 55%);
+  pointer-events:none; z-index:0;
+}
+.research-card{
+  position:relative; z-index:1;
+  border:1px solid var(--neon); padding:34px;
+  background:linear-gradient(180deg, rgba(0,240,255,0.06), var(--panel) 60%);
+  box-shadow:0 0 0 1px rgba(0,240,255,0.08), 0 20px 60px -20px rgba(0,240,255,0.35), inset 0 1px 0 rgba(0,240,255,0.15);
+  border-radius:2px;
+}
+.research-card .rtag{
+  font-family:var(--font-mono); font-size:0.7rem; color:var(--neon); letter-spacing:0.14em; text-transform:uppercase;
+  display:flex; align-items:center; gap:8px;
+}
+.research-card .rtag::before{
+  content:''; width:7px; height:7px; background:var(--neon); border-radius:1px; box-shadow:0 0 10px var(--neon);
+}
+.research-card h4{
+  font-family:var(--font-display); font-weight:800; text-transform:uppercase; font-size:1.7rem;
+  margin-top:12px; line-height:1.12; color:var(--ink);
+  text-shadow:0 0 24px rgba(0,240,255,0.25);
+}
+.research-card p{ margin-top:16px; color:var(--ink-dim); font-size:0.94rem; line-height:1.65; }
+.research-card .ptopics{ display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+.research-card .ptopics span{
+  font-family:var(--font-mono); font-size:0.7rem; padding:5px 11px;
+  border:1px solid rgba(0,240,255,0.35); color:var(--neon); background:rgba(0,240,255,0.06);
+  border-radius:100px;
+}
 .certs h5{ font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:18px; }
 .cert-item{ display:flex; justify-content:space-between; gap:14px; padding:18px 0; border-bottom:1px solid var(--line-soft); }
 .cert-item:first-of-type{ border-top:1px solid var(--line-soft); }
@@ -387,11 +414,6 @@ footer a:hover{ color:var(--lime); }
           <div class="stat-cell"><div class="num">92%</div><div class="lab">Fraud recall, sub-1ms inference</div></div>
           <div class="stat-cell"><div class="num">3</div><div class="lab">Deployed end-to-end ML systems</div></div>
           <div class="stat-cell"><div class="num">2026</div><div class="lab">CS (Hons), graduated</div></div>
-        </div>
-        <div class="edu-card">
-          <div class="deg">B.Sc. Computer Science (Hons)</div>
-          University of Delhi — New Delhi, India · June 2026<br>
-          Coursework: Machine Learning, Deep Learning, Data Analysis, Artificial Intelligence, Algorithms, Database Systems
         </div>
       </div>
     </div>
