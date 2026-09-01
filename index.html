@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Anushka Srivastava — ML Engineer &amp; AI Systems Builder</title>
-<meta name="description" content="Portfolio of Anushka Srivastava — Computer Science graduate building computer vision, RAG, and applied ML systems." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Anushka Srivastava — ML Engineer & AI Systems Builder</title>
+
+<meta name="description" content="Portfolio of Anushka Srivastava — Computer Science graduate building computer vision, RAG, and applied ML systems.">
+<meta name="theme-color" content="#07080a">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --bg:#07080a;
   --bg-soft:#0b0d10;
   --panel:#0f1216;
   --panel-2:#121620;
-  --line:rgba(255,255,255,0.09);
-  --line-soft:rgba(255,255,255,0.05);
+  --line:rgba(255,255,255,.09);
+  --line-soft:rgba(255,255,255,.05);
   --ink:#eef1ec;
   --ink-dim:#919a90;
   --ink-faint:#565d56;
   --lime:#c8ff4d;
-  --lime-soft:rgba(200,255,77,0.1);
+  --lime-soft:rgba(200,255,77,.1);
   --lime-dim:#7c9a3c;
   --flag:#ff5469;
   --blue:#6fb8ff;
   --neon:#00f0ff;
-  --neon-dim:rgba(0,240,255,0.14);
-  --font-display:'Big Shoulders Display', sans-serif;
-  --font-body:'Manrope', sans-serif;
-  --font-mono:'JetBrains Mono', monospace;
-  --container: 1280px;
-  --edge: 6vw;
+
+  --font-display:'Big Shoulders Display',sans-serif;
+  --font-body:'Manrope',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+
+  --container:1280px;
+  --edge:6vw;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
 body{
   background:var(--bg);
   color:var(--ink);
@@ -41,141 +56,318 @@ body{
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
 }
-img,canvas{display:block;max-width:100%;}
-a{color:inherit;text-decoration:none;}
-ul{list-style:none;}
-button{font-family:inherit;cursor:pointer;}
-::selection{background:var(--lime);color:#07080a;}
 
-.wrap{ max-width:var(--container); margin:0 auto; padding:0 var(--edge); }
+img,
+canvas{
+  display:block;
+  max-width:100%;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button,
+input,
+textarea{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+ul{
+  list-style:none;
+}
+
+::selection{
+  background:var(--lime);
+  color:#07080a;
+}
+
+.wrap{
+  max-width:var(--container);
+  margin:0 auto;
+  padding:0 var(--edge);
+}
+
 .eyebrow{
   font-family:var(--font-mono);
-  font-size:0.72rem;
-  letter-spacing:0.18em;
+  font-size:.72rem;
+  letter-spacing:.18em;
   text-transform:uppercase;
   color:var(--lime);
   display:flex;
   align-items:center;
   gap:10px;
 }
+
 .eyebrow::before{
   content:'';
-  width:7px;height:7px;
+  width:7px;
+  height:7px;
   background:var(--lime);
   border-radius:1px;
   display:inline-block;
   box-shadow:0 0 8px var(--lime);
 }
-.section-head{ margin-bottom:48px; }
+
+.section-head{
+  margin-bottom:48px;
+}
+
 .section-head h2{
   font-family:var(--font-display);
   font-weight:800;
   text-transform:uppercase;
-  font-size:clamp(2.4rem, 6vw, 4.4rem);
-  line-height:0.95;
-  letter-spacing:-0.01em;
+  font-size:clamp(2.4rem,6vw,4.4rem);
+  line-height:.95;
+  letter-spacing:-.01em;
   margin-top:14px;
 }
+
 .section-head p{
   font-family:var(--font-mono);
   color:var(--ink-dim);
-  font-size:0.92rem;
+  font-size:.92rem;
   max-width:46ch;
   margin-top:16px;
   line-height:1.6;
 }
 
-/* reveal animation */
-.reveal{ opacity:0; transform:translateY(28px); transition:opacity .8s cubic-bezier(.16,.84,.44,1), transform .8s cubic-bezier(.16,.84,.44,1); }
-.reveal.in{ opacity:1; transform:translateY(0); }
-.reveal-stag > *{ opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
-.reveal-stag.in > *{ opacity:1; transform:translateY(0); }
-.reveal-stag.in > *:nth-child(1){transition-delay:.02s;}
-.reveal-stag.in > *:nth-child(2){transition-delay:.09s;}
-.reveal-stag.in > *:nth-child(3){transition-delay:.16s;}
-.reveal-stag.in > *:nth-child(4){transition-delay:.23s;}
-.reveal-stag.in > *:nth-child(5){transition-delay:.30s;}
-.reveal-stag.in > *:nth-child(6){transition-delay:.37s;}
+/* REVEALS */
 
-@media (prefers-reduced-motion: reduce){
-  .reveal,.reveal-stag > *{ opacity:1 !important; transform:none !important; transition:none !important; }
-  html{scroll-behavior:auto;}
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:
+    opacity .8s cubic-bezier(.16,.84,.44,1),
+    transform .8s cubic-bezier(.16,.84,.44,1);
 }
 
-/* ============ PRELOADER ============ */
+.reveal.in{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.reveal-stag > *{
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .6s ease,transform .6s ease;
+}
+
+.reveal-stag.in > *{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.reveal-stag.in > *:nth-child(1){transition-delay:.02s}
+.reveal-stag.in > *:nth-child(2){transition-delay:.09s}
+.reveal-stag.in > *:nth-child(3){transition-delay:.16s}
+.reveal-stag.in > *:nth-child(4){transition-delay:.23s}
+.reveal-stag.in > *:nth-child(5){transition-delay:.30s}
+.reveal-stag.in > *:nth-child(6){transition-delay:.37s}
+
+@media(prefers-reduced-motion:reduce){
+  .reveal,
+  .reveal-stag > *{
+    opacity:1!important;
+    transform:none!important;
+    transition:none!important;
+  }
+
+  html{
+    scroll-behavior:auto;
+  }
+}
+
+/* BOOT */
+
 #boot{
-  position:fixed; inset:0; z-index:999;
+  position:fixed;
+  inset:0;
+  z-index:9999;
   background:#07080a;
-  display:flex; align-items:center; justify-content:center;
-  transition:opacity .6s ease, visibility .6s ease;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:opacity .6s ease,visibility .6s ease;
 }
-#boot.hide{ opacity:0; visibility:hidden; pointer-events:none; }
+
+#boot.hide{
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+}
+
 #boot .lines{
   font-family:var(--font-mono);
-  font-size:0.82rem;
+  font-size:.82rem;
   color:var(--lime-dim);
   line-height:1.9;
   min-width:280px;
 }
-#boot .lines span{ color:var(--lime); }
-#boot .cursor{ display:inline-block; width:8px; height:14px; background:var(--lime); margin-left:4px; vertical-align:middle; animation:blink 1s steps(2) infinite; }
-@keyframes blink{ 50%{ opacity:0; } }
 
-/* ============ NAV ============ */
+#boot .lines span{
+  color:var(--lime);
+}
+
+#boot .cursor{
+  display:inline-block;
+  width:8px;
+  height:14px;
+  background:var(--lime);
+  margin-left:4px;
+  vertical-align:middle;
+  animation:blink 1s steps(2) infinite;
+}
+
+@keyframes blink{
+  50%{opacity:0}
+}
+
+/* NAV */
+
 header.nav{
-  position:fixed; top:0; left:0; right:0; z-index:200;
-  display:flex; align-items:center; justify-content:space-between;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:200;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   padding:22px var(--edge);
-  background:linear-gradient(to bottom, rgba(7,8,10,0.9), rgba(7,8,10,0));
+  background:linear-gradient(
+    to bottom,
+    rgba(7,8,10,.9),
+    rgba(7,8,10,0)
+  );
   font-family:var(--font-mono);
-  font-size:0.78rem;
-  letter-spacing:0.05em;
+  font-size:.78rem;
+  letter-spacing:.05em;
   pointer-events:none;
 }
-header.nav *{ pointer-events:auto; }
+
+header.nav *{
+  pointer-events:auto;
+}
+
 .logo{
   font-family:var(--font-display);
-  font-weight:800; font-size:1.3rem; letter-spacing:0.02em;
-  display:flex; gap:6px; align-items:baseline;
+  font-weight:800;
+  font-size:1.3rem;
+  letter-spacing:.02em;
+  display:flex;
+  gap:6px;
+  align-items:baseline;
 }
-.logo .dot{ color:var(--lime); }
-nav.links{ display:flex; gap:28px; }
-nav.links a{
-  text-transform:uppercase; color:var(--ink-dim);
-  position:relative; padding-bottom:4px; transition:color .3s;
-}
-nav.links a::after{
-  content:''; position:absolute; left:0; bottom:0; width:0; height:1px;
-  background:var(--lime); transition:width .3s ease;
-}
-nav.links a:hover{ color:var(--ink); }
-nav.links a:hover::after{ width:100%; }
-.nav-social{ display:flex; gap:18px; }
-.nav-social a{ color:var(--ink-dim); transition:color .3s; }
-.nav-social a:hover{ color:var(--lime); }
-@media (max-width: 760px){ nav.links{ display:none; } }
 
-/* ============ HERO ============ */
+.logo .dot{
+  color:var(--lime);
+}
+
+nav.links{
+  display:flex;
+  gap:28px;
+}
+
+nav.links a{
+  text-transform:uppercase;
+  color:var(--ink-dim);
+  position:relative;
+  padding-bottom:4px;
+  transition:color .3s;
+}
+
+nav.links a::after{
+  content:'';
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0;
+  height:1px;
+  background:var(--lime);
+  transition:width .3s ease;
+}
+
+nav.links a:hover{
+  color:var(--ink);
+}
+
+nav.links a:hover::after{
+  width:100%;
+}
+
+.nav-social{
+  display:flex;
+  gap:18px;
+}
+
+.nav-social a{
+  color:var(--ink-dim);
+  transition:color .3s;
+}
+
+.nav-social a:hover{
+  color:var(--lime);
+}
+
+/* HERO */
+
 .hero{
-  position:relative; min-height:100vh;
-  display:flex; flex-direction:column; justify-content:center;
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
   padding:120px var(--edge) 60px;
   overflow:hidden;
 }
-#hero-canvas{ position:absolute; inset:0; z-index:0; opacity:0.55; }
-.hero-inner{ position:relative; z-index:2; }
-.hero-tag{ margin-bottom:22px; }
+
+#hero-canvas{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+  opacity:.55;
+}
+
+.hero-inner{
+  position:relative;
+  z-index:2;
+}
+
+.hero-tag{
+  margin-bottom:22px;
+}
+
 .hero h1{
   font-family:var(--font-display);
   font-weight:900;
   text-transform:uppercase;
-  font-size:clamp(3.4rem, 13.5vw, 9.5rem);
-  line-height:0.84;
-  letter-spacing:-0.015em;
+  font-size:clamp(3.4rem,13.5vw,9.5rem);
+  line-height:.84;
+  letter-spacing:-.015em;
 }
-.hero h1 .line{ display:block; overflow:hidden; }
-.hero h1 .line span{ display:inline-block; }
-.hero h1 .line:nth-child(2){ color:transparent; -webkit-text-stroke:1.5px var(--ink); }
+
+.hero h1 .line{
+  display:block;
+  overflow:hidden;
+}
+
+.hero h1 .line span{
+  display:inline-block;
+}
+
+.hero h1 .line:nth-child(2){
+  color:transparent;
+  -webkit-text-stroke:1.5px var(--ink);
+}
+
 .hero-sub{
   margin-top:26px;
   max-width:560px;
@@ -184,425 +376,1490 @@ nav.links a:hover::after{ width:100%; }
   color:var(--ink-dim);
   line-height:1.7;
 }
-.hero-sub b{ color:var(--lime); font-weight:600; }
+
+.hero-sub b{
+  color:var(--lime);
+  font-weight:600;
+}
+
 .hero-meta{
-  margin-top:42px; display:flex; gap:34px; flex-wrap:wrap;
-  font-family:var(--font-mono); font-size:0.78rem; color:var(--ink-faint);
-  text-transform:uppercase; letter-spacing:0.06em;
+  margin-top:42px;
+  display:flex;
+  gap:34px;
+  flex-wrap:wrap;
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  color:var(--ink-faint);
+  text-transform:uppercase;
+  letter-spacing:.06em;
 }
-.hero-meta strong{ display:block; color:var(--ink); font-size:0.95rem; margin-top:4px; letter-spacing:0; text-transform:none; }
+
+.hero-meta strong{
+  display:block;
+  color:var(--ink);
+  font-size:.95rem;
+  margin-top:4px;
+  letter-spacing:0;
+  text-transform:none;
+}
+
 .scroll-cue{
-  position:absolute; bottom:36px; left:var(--edge);
-  display:flex; align-items:center; gap:10px;
-  font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.15em;
-  color:var(--ink-faint); text-transform:uppercase; z-index:2;
+  position:absolute;
+  bottom:36px;
+  left:var(--edge);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  letter-spacing:.15em;
+  color:var(--ink-faint);
+  text-transform:uppercase;
+  z-index:2;
 }
-.scroll-cue .bar{ width:1px; height:34px; background:var(--ink-faint); position:relative; overflow:hidden; }
-.scroll-cue .bar::after{ content:''; position:absolute; top:0; left:0; width:100%; height:40%; background:var(--lime); animation:scrolldown 1.8s ease-in-out infinite; }
-@keyframes scrolldown{ 0%{ transform:translateY(-100%); } 100%{ transform:translateY(250%); } }
 
-/* ============ ABOUT ============ */
-.about{ padding:140px var(--edge) 100px; border-top:1px solid var(--line); position:relative; }
-.about-grid{ display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; align-items:start; }
-.about-bio p{ font-size:1.18rem; line-height:1.7; color:var(--ink); }
-.about-bio p + p{ margin-top:20px; color:var(--ink-dim); font-size:1.02rem; }
-.stat-rail{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line); border:1px solid var(--line); }
-.stat-cell{ background:var(--bg); padding:26px 22px; }
-.stat-cell .num{ font-family:var(--font-display); font-weight:800; font-size:2.6rem; color:var(--lime); line-height:1; }
-.stat-cell .lab{ font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint); margin-top:8px; }
+.scroll-cue .bar{
+  width:1px;
+  height:34px;
+  background:var(--ink-faint);
+  position:relative;
+  overflow:hidden;
+}
+
+.scroll-cue .bar::after{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:40%;
+  background:var(--lime);
+  animation:scrolldown 1.8s ease-in-out infinite;
+}
+
+@keyframes scrolldown{
+  0%{transform:translateY(-100%)}
+  100%{transform:translateY(250%)}
+}
+
+/* ABOUT */
+
+.about{
+  padding:140px var(--edge) 100px;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:70px;
+  align-items:start;
+}
+
+.about-bio p{
+  font-size:1.18rem;
+  line-height:1.7;
+  color:var(--ink);
+}
+
+.about-bio p + p{
+  margin-top:20px;
+  color:var(--ink-dim);
+  font-size:1.02rem;
+}
+
+.stat-rail{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:1px;
+  background:var(--line);
+  border:1px solid var(--line);
+}
+
+.stat-cell{
+  background:var(--bg);
+  padding:26px 22px;
+}
+
+.stat-cell .num{
+  font-family:var(--font-display);
+  font-weight:800;
+  font-size:2.6rem;
+  color:var(--lime);
+  line-height:1;
+}
+
+.stat-cell .lab{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-top:8px;
+}
+
 .edu-card{
-  margin-top:28px; border:1px solid var(--line); padding:22px 24px; background:var(--panel);
-  font-family:var(--font-mono); font-size:0.85rem; color:var(--ink-dim); line-height:1.7;
-}
-.edu-card .deg{ color:var(--ink); font-size:0.95rem; font-weight:600; font-family:var(--font-body); }
-@media (max-width: 880px){ .about-grid{ grid-template-columns:1fr; gap:40px; } }
-
-/* ============ SKILLS ============ */
-.skills{ padding:100px var(--edge) 110px; border-top:1px solid var(--line); }
-.skill-groups{ display:grid; grid-template-columns:repeat(2,1fr); gap:36px 50px; margin-top:10px; }
-.skill-group .gname{ font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:14px; }
-.chips{ display:flex; flex-wrap:wrap; gap:9px; }
-.chip{
-  font-family:var(--font-mono); font-size:0.82rem; padding:8px 14px;
-  border:1px solid var(--line); border-radius:100px; color:var(--ink-dim);
-  transition:border-color .25s, color .25s, transform .25s, box-shadow .25s;
-}
-.chip:hover{ border-color:var(--lime); color:var(--lime); transform:translateY(-2px); box-shadow:0 6px 18px -8px var(--lime); }
-@media (max-width: 760px){ .skill-groups{ grid-template-columns:1fr; gap:30px; } }
-
-/* ============ PROJECTS ============ */
-.work-head{ padding:90px var(--edge) 0; border-top:1px solid var(--line); }
-.project{
-  position:relative; min-height:100vh; display:flex; align-items:center;
-  padding:90px var(--edge); overflow:hidden; border-bottom:1px solid var(--line);
-}
-.project canvas{ position:absolute; inset:0; z-index:0; width:100%; height:100%; }
-.project .scrim{ position:absolute; inset:0; z-index:1; background:linear-gradient(180deg, rgba(7,8,10,0.55) 0%, rgba(7,8,10,0.25) 35%, rgba(7,8,10,0.75) 100%); }
-.project-inner{ position:relative; z-index:2; width:100%; display:grid; grid-template-columns:0.95fr 1.05fr; gap:60px; align-items:end; }
-.proj-id{ font-family:var(--font-mono); font-size:0.74rem; letter-spacing:0.16em; color:var(--ink-faint); text-transform:uppercase; }
-.proj-id b{ color:var(--lime); }
-.corner{ position:absolute; width:26px; height:26px; border-color:var(--lime); opacity:0.65; z-index:2; }
-.corner.tl{ top:108px; left:var(--edge); border-top:2px solid; border-left:2px solid; }
-.corner.br{ bottom:36px; right:var(--edge); border-bottom:2px solid; border-right:2px solid; }
-.hud{
-  position:absolute; top:108px; right:var(--edge); z-index:2; text-align:right;
-  font-family:var(--font-mono); font-size:0.7rem; color:var(--lime); line-height:1.7;
-  text-shadow:0 0 12px rgba(200,255,77,0.5); min-width:160px;
-}
-.hud .hl{ color:var(--ink-dim); text-shadow:none; }
-@media (max-width: 900px){
-  .project{ flex-direction:column; align-items:flex-start; padding:120px var(--edge); min-height:auto; }
-  .project-inner{ grid-template-columns:1fr; width:100%; }
-  .hud{ position:static; text-align:left; margin-bottom:18px; width:100%; }
-  .corner{ display:none; }
-}
-.project h3{
-  font-family:var(--font-display); font-weight:900; text-transform:uppercase;
-  font-size:clamp(2.4rem, 6.2vw, 5.4rem); line-height:0.92; margin-top:10px; letter-spacing:-0.01em;
-}
-.proj-status{ display:inline-flex; align-items:center; gap:8px; margin-top:18px; font-family:var(--font-mono); font-size:0.74rem; color:var(--lime); letter-spacing:0.08em; text-transform:uppercase; }
-.proj-status::before{ content:''; width:6px; height:6px; border-radius:50%; background:var(--lime); box-shadow:0 0 10px var(--lime); animation:pulse 1.6s infinite; }
-@keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:.35;} }
-.proj-desc{ font-size:1.04rem; line-height:1.7; color:var(--ink); max-width:54ch; margin-top:22px; }
-.proj-stats{ display:flex; gap:30px; margin-top:30px; flex-wrap:wrap; }
-.proj-stats div b{ display:block; font-family:var(--font-display); font-size:1.9rem; font-weight:800; color:var(--ink); }
-.proj-stats div span{ font-family:var(--font-mono); font-size:0.66rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.08em; }
-.proj-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:26px; }
-.proj-tags span{ font-family:var(--font-mono); font-size:0.72rem; padding:5px 11px; border:1px solid var(--line-soft); color:var(--ink-dim); }
-.proj-links{ display:flex; gap:16px; margin-top:32px; flex-wrap:wrap; }
-.btn{
-  font-family:var(--font-mono); font-size:0.78rem; letter-spacing:0.05em; text-transform:uppercase;
-  padding:13px 26px; border:1px solid var(--ink); display:inline-flex; align-items:center; gap:10px;
-  transition:background .25s, color .25s, border-color .25s;
-}
-.btn:hover{ background:var(--lime); border-color:var(--lime); color:#07080a; }
-.btn.alt{ border-color:var(--line); color:var(--ink-dim); }
-.btn.alt:hover{ background:transparent; border-color:var(--lime); color:var(--lime); }
-.proj-side{ font-family:var(--font-mono); font-size:0.82rem; color:var(--ink-dim); line-height:1.8; }
-.proj-side .glist{ margin-top:14px; }
-.proj-side .glist li{ padding-left:18px; position:relative; margin-bottom:10px; }
-.proj-side .glist li::before{ content:'›'; position:absolute; left:0; color:var(--lime); }
-
-/* ============ RESEARCH / CERTS ============ */
-.research{ padding:110px var(--edge); border-top:1px solid var(--line); display:grid; grid-template-columns:1.1fr 0.9fr; gap:70px; position:relative; }
-.research::before{
-  content:''; position:absolute; top:0; left:0; right:0; height:100%;
-  background:radial-gradient(circle at 15% 20%, rgba(200,255,77,0.05), transparent 55%);
-  pointer-events:none; z-index:0;
-}
-.research-card{
-  position:relative; z-index:1;
-  border:1px solid rgba(200,255,77,0.35); padding:34px;
+  margin-top:28px;
+  border:1px solid var(--line);
+  padding:22px 24px;
   background:var(--panel);
-  box-shadow:0 12px 32px -18px rgba(0,0,0,0.5), 0 0 28px -12px rgba(200,255,77,0.25);
+  font-family:var(--font-mono);
+  font-size:.85rem;
+  color:var(--ink-dim);
+  line-height:1.7;
+}
+
+.edu-card .deg{
+  color:var(--ink);
+  font-size:.95rem;
+  font-weight:600;
+  font-family:var(--font-body);
+}
+
+/* SKILLS */
+
+.skills{
+  padding:100px var(--edge) 110px;
+  border-top:1px solid var(--line);
+}
+
+.skill-groups{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:36px 50px;
+  margin-top:10px;
+}
+
+.skill-group .gname{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-bottom:14px;
+}
+
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px;
+}
+
+.chip{
+  font-family:var(--font-mono);
+  font-size:.82rem;
+  padding:8px 14px;
+  border:1px solid var(--line);
+  border-radius:100px;
+  color:var(--ink-dim);
+  transition:
+    border-color .25s,
+    color .25s,
+    transform .25s,
+    box-shadow .25s;
+}
+
+.chip:hover{
+  border-color:var(--lime);
+  color:var(--lime);
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px -8px var(--lime);
+}
+
+/* WORK */
+
+.work-head{
+  padding:90px var(--edge) 0;
+  border-top:1px solid var(--line);
+}
+
+.project{
+  position:relative;
+  min-height:100svh;
+  display:flex;
+  align-items:center;
+  padding:90px var(--edge);
+  overflow:hidden;
+  border-bottom:1px solid var(--line);
+}
+
+.project canvas{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  width:100%;
+  height:100%;
+}
+
+.project .scrim{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7,8,10,.55) 0%,
+      rgba(7,8,10,.25) 35%,
+      rgba(7,8,10,.75) 100%
+    );
+}
+
+.project-inner{
+  position:relative;
+  z-index:2;
+  width:100%;
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:60px;
+  align-items:end;
+}
+
+.proj-id{
+  font-family:var(--font-mono);
+  font-size:.74rem;
+  letter-spacing:.16em;
+  color:var(--ink-faint);
+  text-transform:uppercase;
+}
+
+.proj-id b{
+  color:var(--lime);
+}
+
+.corner{
+  position:absolute;
+  width:26px;
+  height:26px;
+  border-color:var(--lime);
+  opacity:.65;
+  z-index:2;
+}
+
+.corner.tl{
+  top:108px;
+  left:var(--edge);
+  border-top:2px solid;
+  border-left:2px solid;
+}
+
+.corner.br{
+  bottom:36px;
+  right:var(--edge);
+  border-bottom:2px solid;
+  border-right:2px solid;
+}
+
+.hud{
+  position:absolute;
+  top:108px;
+  right:var(--edge);
+  z-index:2;
+  text-align:right;
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  color:var(--lime);
+  line-height:1.7;
+  text-shadow:0 0 12px rgba(200,255,77,.5);
+  min-width:160px;
+}
+
+.hud .hl{
+  color:var(--ink-dim);
+  text-shadow:none;
+}
+
+.project h3{
+  font-family:var(--font-display);
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:clamp(2.4rem,6.2vw,5.4rem);
+  line-height:.92;
+  margin-top:10px;
+  letter-spacing:-.01em;
+}
+
+.proj-status{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+  font-family:var(--font-mono);
+  font-size:.74rem;
+  color:var(--lime);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.proj-status::before{
+  content:'';
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:var(--lime);
+  box-shadow:0 0 10px var(--lime);
+  animation:pulse 1.6s infinite;
+}
+
+@keyframes pulse{
+  0%,100%{opacity:1}
+  50%{opacity:.35}
+}
+
+.proj-desc{
+  font-size:1.04rem;
+  line-height:1.7;
+  color:var(--ink);
+  max-width:54ch;
+  margin-top:22px;
+}
+
+.proj-stats{
+  display:flex;
+  gap:30px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+
+.proj-stats div b{
+  display:block;
+  font-family:var(--font-display);
+  font-size:1.9rem;
+  font-weight:800;
+  color:var(--ink);
+}
+
+.proj-stats div span{
+  font-family:var(--font-mono);
+  font-size:.66rem;
+  color:var(--ink-faint);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.proj-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:26px;
+}
+
+.proj-tags span{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  padding:5px 11px;
+  border:1px solid var(--line-soft);
+  color:var(--ink-dim);
+}
+
+.proj-links{
+  display:flex;
+  gap:16px;
+  margin-top:32px;
+  flex-wrap:wrap;
+}
+
+.btn{
+  font-family:var(--font-mono);
+  font-size:.78rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  padding:13px 26px;
+  border:1px solid var(--ink);
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  transition:
+    background .25s,
+    color .25s,
+    border-color .25s;
+}
+
+.btn:hover{
+  background:var(--lime);
+  border-color:var(--lime);
+  color:#07080a;
+}
+
+.btn.alt{
+  border-color:var(--line);
+  color:var(--ink-dim);
+}
+
+.btn.alt:hover{
+  background:transparent;
+  border-color:var(--lime);
+  color:var(--lime);
+}
+
+.btn:disabled{
+  opacity:.6;
+  cursor:not-allowed;
+}
+
+.proj-side{
+  font-family:var(--font-mono);
+  font-size:.82rem;
+  color:var(--ink-dim);
+  line-height:1.8;
+}
+
+.proj-side .glist{
+  margin-top:14px;
+}
+
+.proj-side .glist li{
+  padding-left:18px;
+  position:relative;
+  margin-bottom:10px;
+}
+
+.proj-side .glist li::before{
+  content:'›';
+  position:absolute;
+  left:0;
+  color:var(--lime);
+}
+
+/* RESEARCH */
+
+.research{
+  padding:110px var(--edge);
+  border-top:1px solid var(--line);
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:70px;
+  position:relative;
+}
+
+.research::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:100%;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(200,255,77,.05),
+      transparent 55%
+    );
+  pointer-events:none;
+  z-index:0;
+}
+
+.research-card{
+  position:relative;
+  z-index:1;
+  border:1px solid rgba(200,255,77,.35);
+  padding:34px;
+  background:var(--panel);
+  box-shadow:
+    0 12px 32px -18px rgba(0,0,0,.5),
+    0 0 28px -12px rgba(200,255,77,.25);
   border-radius:2px;
 }
+
 .research-card .rtag{
-  font-family:var(--font-mono); font-size:0.7rem; color:var(--lime); letter-spacing:0.14em; text-transform:uppercase;
-  display:flex; align-items:center; gap:8px;
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  color:var(--lime);
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  display:flex;
+  align-items:center;
+  gap:8px;
 }
+
 .research-card .rtag::before{
-  content:''; width:7px; height:7px; background:var(--lime); border-radius:1px; box-shadow:0 0 6px rgba(200,255,77,0.6);
+  content:'';
+  width:7px;
+  height:7px;
+  background:var(--lime);
+  border-radius:1px;
+  box-shadow:0 0 6px rgba(200,255,77,.6);
 }
+
 .research-card h4{
-  font-family:var(--font-display); font-weight:800; text-transform:uppercase; font-size:1.7rem;
-  margin-top:12px; line-height:1.12; color:var(--ink);
+  font-family:var(--font-display);
+  font-weight:800;
+  text-transform:uppercase;
+  font-size:1.7rem;
+  margin-top:12px;
+  line-height:1.12;
+  color:var(--ink);
 }
-.research-card p{ margin-top:16px; color:var(--ink-dim); font-size:0.94rem; line-height:1.65; }
-.research-card .ptopics{ display:flex; flex-wrap:wrap; gap:8px; margin-top:20px; }
+
+.research-card p{
+  margin-top:16px;
+  color:var(--ink-dim);
+  font-size:.94rem;
+  line-height:1.65;
+}
+
+.research-card .ptopics{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:20px;
+}
+
 .research-card .ptopics span{
-  font-family:var(--font-mono); font-size:0.7rem; padding:5px 11px;
-  border:1px solid rgba(200,255,77,0.25); color:var(--lime-dim); background:rgba(200,255,77,0.04);
+  font-family:var(--font-mono);
+  font-size:.7rem;
+  padding:5px 11px;
+  border:1px solid rgba(200,255,77,.25);
+  color:var(--lime-dim);
+  background:rgba(200,255,77,.04);
   border-radius:100px;
 }
-.certs h5{ font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--ink-faint); margin-bottom:18px; }
-.cert-item{ display:flex; justify-content:space-between; gap:14px; padding:18px 0; border-bottom:1px solid var(--line-soft); }
-.cert-item:first-of-type{ border-top:1px solid var(--line-soft); }
-.cert-item .cname{ font-weight:600; font-size:0.96rem; }
-.cert-item .cissuer{ font-family:var(--font-mono); font-size:0.74rem; color:var(--ink-faint); margin-top:5px; }
-@media (max-width: 880px){ .research{ grid-template-columns:1fr; } }
 
-/* ============ CONTACT ============ */
-.contact{ padding:130px var(--edge) 90px; border-top:1px solid var(--line); position:relative; }
-.contact-top h2{
-  font-family:var(--font-display); font-weight:900; text-transform:uppercase;
-  font-size:clamp(2.6rem, 8vw, 6rem); line-height:0.94;
+.certs{
+  position:relative;
+  z-index:1;
 }
-.contact-top h2 a{ color:var(--lime); border-bottom:3px solid var(--lime-dim); transition:opacity .25s; }
-.contact-top h2 a:hover{ opacity:0.8; }
-.contact-grid{ display:grid; grid-template-columns:1fr 1fr; gap:70px; margin-top:64px; }
-.contact-links{ font-family:var(--font-mono); font-size:0.92rem; }
-.contact-links .row{ display:flex; justify-content:space-between; padding:18px 0; border-bottom:1px solid var(--line-soft); color:var(--ink-dim); transition:color .25s,padding-left .25s; }
-.contact-links .row:first-child{ border-top:1px solid var(--line-soft); }
-.contact-links .row:hover{ color:var(--ink); padding-left:8px; }
-.contact-links .row span:last-child{ color:var(--ink-faint); }
-.contact-links .row:hover span:last-child{ color:var(--lime); }
-form.cform{ display:flex; flex-direction:column; gap:18px; }
-.field{ display:flex; flex-direction:column; gap:8px; }
-.field label{ font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-faint); }
-.field input, .field textarea{
-  background:transparent; border:none; border-bottom:1px solid var(--line);
-  color:var(--ink); font-family:var(--font-body); font-size:1rem; padding:10px 2px;
+
+.certs h5{
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+  margin-bottom:18px;
+}
+
+.cert-item{
+  display:flex;
+  justify-content:space-between;
+  gap:14px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+
+.cert-item:first-of-type{
+  border-top:1px solid var(--line-soft);
+}
+
+.cert-item .cname{
+  font-weight:600;
+  font-size:.96rem;
+}
+
+.cert-item .cissuer{
+  font-family:var(--font-mono);
+  font-size:.74rem;
+  color:var(--ink-faint);
+  margin-top:5px;
+}
+
+/* CONTACT */
+
+.contact{
+  padding:130px var(--edge) 90px;
+  border-top:1px solid var(--line);
+  position:relative;
+}
+
+.contact-top h2{
+  font-family:var(--font-display);
+  font-weight:900;
+  text-transform:uppercase;
+  font-size:clamp(2.6rem,8vw,6rem);
+  line-height:.94;
+}
+
+.contact-top h2 a{
+  color:var(--lime);
+  border-bottom:3px solid var(--lime-dim);
+  transition:opacity .25s;
+}
+
+.contact-top h2 a:hover{
+  opacity:.8;
+}
+
+.contact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  margin-top:64px;
+}
+
+.contact-links{
+  font-family:var(--font-mono);
+  font-size:.92rem;
+}
+
+.contact-links .row{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:18px 0;
+  border-bottom:1px solid var(--line-soft);
+  color:var(--ink-dim);
+  transition:color .25s,padding-left .25s;
+}
+
+.contact-links .row:first-child{
+  border-top:1px solid var(--line-soft);
+}
+
+.contact-links .row:hover{
+  color:var(--ink);
+  padding-left:8px;
+}
+
+.contact-links .row span:last-child{
+  color:var(--ink-faint);
+  text-align:right;
+}
+
+.contact-links .row:hover span:last-child{
+  color:var(--lime);
+}
+
+form.cform{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.field{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.field label{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-faint);
+}
+
+.field input,
+.field textarea{
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid var(--line);
+  color:var(--ink);
+  font-family:var(--font-body);
+  font-size:1rem;
+  padding:10px 2px;
   transition:border-color .25s;
 }
-.field input:focus, .field textarea:focus{ outline:none; border-color:var(--lime); }
-.field textarea{ resize:vertical; min-height:80px; }
-.cform .btn{ align-self:flex-start; margin-top:10px; background:none; border:1px solid var(--ink); color:var(--ink); }
-.form-note{ font-family:var(--font-mono); font-size:0.68rem; color:var(--ink-faint); margin-top:2px; }
-@media (max-width: 880px){ .contact-grid{ grid-template-columns:1fr; gap:46px; } }
 
-footer{ padding:34px var(--edge) 40px; display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--line); font-family:var(--font-mono); font-size:0.72rem; color:var(--ink-faint); text-transform:uppercase; letter-spacing:0.06em; }
-footer a{ color:var(--ink-dim); transition:color .25s; }
-footer a:hover{ color:var(--lime); }
-#totop{ background:none; border:1px solid var(--line); color:var(--ink-dim); width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center; transition:border-color .25s, color .25s; }
-#totop:hover{ border-color:var(--lime); color:var(--lime); }
+.field input:focus,
+.field textarea:focus{
+  outline:none;
+  border-color:var(--lime);
+}
+
+.field textarea{
+  resize:vertical;
+  min-height:100px;
+}
+
+.cform .btn{
+  align-self:flex-start;
+  margin-top:10px;
+  background:none;
+  color:var(--ink);
+}
+
+.form-note{
+  font-family:var(--font-mono);
+  font-size:.68rem;
+  color:var(--ink-faint);
+  margin-top:2px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:34px var(--edge) 40px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  border-top:1px solid var(--line);
+  font-family:var(--font-mono);
+  font-size:.72rem;
+  color:var(--ink-faint);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+footer a{
+  color:var(--ink-dim);
+  transition:color .25s;
+}
+
+footer a:hover{
+  color:var(--lime);
+}
+
+#totop{
+  background:none;
+  border:1px solid var(--line);
+  color:var(--ink-dim);
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:border-color .25s,color .25s;
+}
+
+#totop:hover{
+  border-color:var(--lime);
+  color:var(--lime);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+  .project{
+    min-height:auto;
+    padding:130px var(--edge);
+  }
+
+  .project-inner{
+    grid-template-columns:1fr;
+    gap:42px;
+  }
+
+  .hud{
+    position:relative;
+    top:auto;
+    right:auto;
+    text-align:left;
+    margin-bottom:20px;
+    width:100%;
+  }
+
+  .corner{
+    display:none;
+  }
+
+  .research{
+    grid-template-columns:1fr;
+  }
+
+  .contact-grid{
+    grid-template-columns:1fr;
+    gap:46px;
+  }
+
+  .about-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+}
+
+@media(max-width:760px){
+  :root{
+    --edge:6vw;
+  }
+
+  nav.links{
+    display:none;
+  }
+
+  .hero{
+    padding-top:130px;
+  }
+
+  .hero h1{
+    font-size:clamp(3.2rem,18vw,6rem);
+  }
+
+  .hero-sub{
+    font-size:.9rem;
+  }
+
+  .hero-meta{
+    gap:22px;
+    margin-top:30px;
+  }
+
+  .skill-groups{
+    grid-template-columns:1fr;
+    gap:30px;
+  }
+
+  .contact-links .row{
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .contact-links .row span:last-child{
+    text-align:left;
+  }
+
+  footer{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+@media(max-width:480px){
+  .stat-rail{
+    grid-template-columns:1fr;
+  }
+
+  .project{
+    padding-top:110px;
+    padding-bottom:100px;
+  }
+
+  .project h3{
+    font-size:clamp(2.8rem,15vw,4rem);
+  }
+
+  .proj-stats{
+    gap:20px;
+  }
+
+  .proj-links{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .btn{
+    width:100%;
+    justify-content:center;
+  }
+
+  .research-card{
+    padding:25px;
+  }
+}
 </style>
 </head>
+
 <body>
 
-<div id="boot">
+<!-- BOOT SCREEN -->
+<div id="boot" aria-hidden="true">
   <div class="lines" id="boot-lines"></div>
 </div>
 
+<!-- NAV -->
 <header class="nav">
-  <a href="#top" class="logo">AS<span class="dot">.</span></a>
-  <nav class="links">
+  <a href="#top" class="logo" aria-label="Back to top">
+    AS<span class="dot">.</span>
+  </a>
+
+  <nav class="links" aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#work">Work</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <div class="nav-social">
-    <a href="https://github.com/anushka-srivastavas" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
-    <a href="https://www.linkedin.com/in/anushka-srivastava33" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+    <a
+      href="https://github.com/anushka-srivastavas"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="GitHub"
+    >GH</a>
+
+    <a
+      href="https://www.linkedin.com/in/anushka-srivastava33"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="LinkedIn"
+    >IN</a>
   </div>
 </header>
 
+<!-- HERO -->
 <section class="hero" id="top">
-  <canvas id="hero-canvas"></canvas>
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
   <div class="hero-inner">
-    <div class="eyebrow hero-tag">New Delhi, India · Open to opportunities</div>
+
+    <div class="eyebrow hero-tag">
+      New Delhi, India · Open to opportunities
+    </div>
+
     <h1>
       <div class="line"><span>Anushka</span></div>
       <div class="line"><span>Srivastava</span></div>
     </h1>
-    <p class="hero-sub">Computer Science graduate (Class of 2026) building <b>computer vision</b>, <b>retrieval-augmented generation</b>, and applied ML systems — from galaxy classifiers to financial document Q&amp;A.</p>
+
+    <p class="hero-sub">
+      Computer Science graduate (Class of 2026) building
+      <b>computer vision</b>,
+      <b>retrieval-augmented generation</b>,
+      and applied ML systems — from galaxy classifiers to financial document Q&amp;A.
+    </p>
+
     <div class="hero-meta">
-      <div>Focus<strong>ML / CV / RAG</strong></div>
-      <div>Stack<strong>PyTorch · LangChain · FAISS</strong></div>
-      <div>Based<strong>New Delhi, IN</strong></div>
+      <div>
+        Focus
+        <strong>ML / CV / RAG</strong>
+      </div>
+
+      <div>
+        Stack
+        <strong>PyTorch · LangChain · FAISS</strong>
+      </div>
+
+      <div>
+        Based
+        <strong>New Delhi, IN</strong>
+      </div>
     </div>
+
   </div>
-  <div class="scroll-cue"><span class="bar"></span> Scroll</div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span class="bar"></span>
+    Scroll
+  </div>
 </section>
 
 <main>
 
+<!-- ABOUT -->
 <section class="about" id="about">
   <div class="wrap">
+
     <div class="eyebrow reveal">// About</div>
+
     <div class="about-grid" style="margin-top:30px;">
+
       <div class="about-bio reveal">
-        <p>I'm a Computer Science graduate from the University of Delhi who likes taking ML models past the notebook — into systems people can actually open in a browser and use.</p>
-        <p>My work sits at the intersection of computer vision, retrieval-augmented generation, and deployment: fine-tuning classifiers, building retrieval pipelines over real documents, and shipping it all behind an API or a Streamlit front end. I care about evaluation as much as architecture — relevancy, faithfulness, recall — not just demos that look good once.</p>
-        <p>Outside of project work, I've researched transformer scaling laws and fine-tuning strategies, and I'm a Stanford / DeepLearning.AI Machine Learning Specialization graduate.</p>
+
+        <p>
+          I'm a Computer Science graduate from the University of Delhi who likes taking ML models past the notebook — into systems people can actually open in a browser and use.
+        </p>
+
+        <p>
+          My work sits at the intersection of computer vision, retrieval-augmented generation, and deployment: fine-tuning classifiers, building retrieval pipelines over real documents, and shipping it all behind an API or a Streamlit front end. I care about evaluation as much as architecture — relevancy, faithfulness, recall — not just demos that look good once.
+        </p>
+
+        <p>
+          Outside of project work, I've researched transformer scaling laws and fine-tuning strategies, and I'm a Stanford / DeepLearning.AI Machine Learning Specialization graduate.
+        </p>
+
       </div>
+
       <div class="reveal">
+
         <div class="stat-rail">
-          <div class="stat-cell"><div class="num">84.3%</div><div class="lab">Galaxy classifier val. accuracy</div></div>
-          <div class="stat-cell"><div class="num">92%</div><div class="lab">Fraud recall, sub-1ms inference</div></div>
-          <div class="stat-cell"><div class="num">4</div><div class="lab">Deployed end-to-end ML systems</div></div>
-          <div class="stat-cell"><div class="num">2026</div><div class="lab">CS (Hons), graduated</div></div>
+
+          <div class="stat-cell">
+            <div class="num">84.3%</div>
+            <div class="lab">Galaxy classifier val. accuracy</div>
+          </div>
+
+          <div class="stat-cell">
+            <div class="num">92%</div>
+            <div class="lab">Fraud recall, sub-1ms inference</div>
+          </div>
+
+          <div class="stat-cell">
+            <div class="num">4</div>
+            <div class="lab">Deployed end-to-end ML systems</div>
+          </div>
+
+          <div class="stat-cell">
+            <div class="num">2026</div>
+            <div class="lab">CS (Hons), graduated</div>
+          </div>
+
         </div>
+
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- SKILLS -->
 <section class="skills" id="skills">
   <div class="wrap">
+
     <div class="eyebrow reveal">// Tooling</div>
+
     <div class="skill-groups" style="margin-top:34px;">
+
       <div class="skill-group reveal">
         <div class="gname">Languages</div>
         <div class="chips">
-          <span class="chip">Python</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">R</span>
+          <span class="chip">Python</span>
+          <span class="chip">C++</span>
+          <span class="chip">SQL</span>
+          <span class="chip">R</span>
         </div>
       </div>
+
       <div class="skill-group reveal">
         <div class="gname">Libraries &amp; Frameworks</div>
         <div class="chips">
-          <span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Scikit-learn</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">LangChain</span><span class="chip">HuggingFace Transformers</span>
+          <span class="chip">PyTorch</span>
+          <span class="chip">TensorFlow</span>
+          <span class="chip">Scikit-learn</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">NumPy</span>
+          <span class="chip">LangChain</span>
+          <span class="chip">HuggingFace Transformers</span>
         </div>
       </div>
+
       <div class="skill-group reveal">
         <div class="gname">Infra &amp; Tools</div>
         <div class="chips">
-          <span class="chip">FastAPI</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">PostgreSQL</span><span class="chip">FAISS</span><span class="chip">Streamlit</span><span class="chip">Git</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Docker</span>
+          <span class="chip">AWS</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">FAISS</span>
+          <span class="chip">Streamlit</span>
+          <span class="chip">Git</span>
         </div>
       </div>
+
       <div class="skill-group reveal">
         <div class="gname">ML Concepts</div>
         <div class="chips">
-          <span class="chip">RAG</span><span class="chip">Fine-tuning</span><span class="chip">Feature engineering</span><span class="chip">Model evaluation</span><span class="chip">Cross-validation</span>
+          <span class="chip">RAG</span>
+          <span class="chip">Fine-tuning</span>
+          <span class="chip">Feature engineering</span>
+          <span class="chip">Model evaluation</span>
+          <span class="chip">Cross-validation</span>
         </div>
       </div>
+
     </div>
   </div>
 </section>
 
+<!-- WORK HEADER -->
 <div class="work-head" id="work">
   <div class="wrap section-head reveal">
+
     <div class="eyebrow">// Selected Work</div>
-    <h2>Things I've<br>shipped.</h2>
-    <p>Four systems, four problems — galaxies, financial filings, fraudulent transactions, and F1 race strategy. Each one built, evaluated, and deployed.</p>
+
+    <h2>
+      Things I've<br>
+      shipped.
+    </h2>
+
+    <p>
+      Four systems, four problems — galaxies, financial filings, fraudulent transactions, and F1 race strategy. Each one built, evaluated, and deployed.
+    </p>
+
   </div>
 </div>
 
-<!-- PROJECT 1 — ARTEMIS ATLAS -->
+<!-- PROJECT 1 -->
 <article class="project" id="artemis">
-  <canvas id="canvas-galaxy"></canvas>
+
+  <canvas id="canvas-galaxy" aria-hidden="true"></canvas>
+
   <div class="scrim"></div>
-  <span class="corner tl"></span><span class="corner br"></span>
-  <div class="hud" id="hud-galaxy"><div class="hl">CLASSIFYING</div><div id="hud-galaxy-class">—</div><div class="hl" id="hud-galaxy-conf">conf 00.0%</div></div>
+
+  <span class="corner tl" aria-hidden="true"></span>
+  <span class="corner br" aria-hidden="true"></span>
+
+  <div class="hud" id="hud-galaxy">
+    <div class="hl">CLASSIFYING</div>
+    <div id="hud-galaxy-class">—</div>
+    <div class="hl" id="hud-galaxy-conf">conf 00.0%</div>
+  </div>
+
   <div class="wrap project-inner">
+
     <div>
-      <div class="proj-id">PRJ_<b>01</b> / 2025 / COMPUTER VISION + RAG</div>
-      <h3>Artemis<br>Atlas</h3>
-      <div class="proj-status">Live &amp; deployed</div>
+
+      <div class="proj-id">
+        PRJ_<b>01</b> / 2025 / COMPUTER VISION + RAG
+      </div>
+
+      <h3>
+        Artemis<br>
+        Atlas
+      </h3>
+
+      <div class="proj-status">
+        Live &amp; deployed
+      </div>
+
       <div class="proj-stats">
-        <div><b>84.3%</b><span>Val. accuracy</span></div>
-        <div><b>17,736</b><span>Training images</span></div>
-        <div><b>10</b><span>Morphology classes</span></div>
+
+        <div>
+          <b>84.3%</b>
+          <span>Val. accuracy</span>
+        </div>
+
+        <div>
+          <b>17,736</b>
+          <span>Training images</span>
+        </div>
+
+        <div>
+          <b>10</b>
+          <span>Morphology classes</span>
+        </div>
+
       </div>
+
       <div class="proj-links">
-        <a class="btn" href="https://artemisatlas.streamlit.app" target="_blank" rel="noopener">Live Demo →</a>
-        <a class="btn alt" href="https://github.com/anushka-srivastavas/ArtemisAtlas" target="_blank" rel="noopener">View Code</a>
+
+        <a
+          class="btn"
+          href="https://artemisatlas.streamlit.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Live Demo →
+        </a>
+
+        <a
+          class="btn alt"
+          href="https://github.com/anushka-srivastavas/ArtemisAtlas"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Code
+        </a>
+
       </div>
+
     </div>
+
     <div>
-      <p class="proj-desc">A galaxy morphology classifier paired with a RAG explanation layer. Upload an image of a galaxy — a fine-tuned ResNet-18 predicts its morphological class with Top-3 confidence, then a retrieval pipeline pulls relevant astronomical context and a Groq-hosted Llama 3.3 70B writes a plain-language explanation of what you're looking at.</p>
+
+      <p class="proj-desc">
+        A galaxy morphology classifier paired with a RAG explanation layer. Upload an image of a galaxy — a fine-tuned ResNet-18 predicts its morphological class with Top-3 confidence, then a retrieval pipeline pulls relevant astronomical context and a Groq-hosted Llama 3.3 70B writes a plain-language explanation of what you're looking at.
+      </p>
+
       <div class="proj-side">
-        <div class="gname" style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Pipeline</div>
+
+        <div class="gname">
+          Pipeline
+        </div>
+
         <ul class="glist">
           <li>ResNet-18 fine-tuned on Galaxy10 DECals</li>
           <li>FAISS semantic search over astronomy knowledge</li>
           <li>Groq Llama 3.3 70B generates the explanation</li>
           <li>Deployed as a public Streamlit app</li>
         </ul>
+
       </div>
+
       <div class="proj-tags">
-        <span>PyTorch</span><span>ResNet-18</span><span>LangChain</span><span>FAISS</span><span>Groq · Llama 3.3 70B</span><span>Streamlit</span>
+        <span>PyTorch</span>
+        <span>ResNet-18</span>
+        <span>LangChain</span>
+        <span>FAISS</span>
+        <span>Groq · Llama 3.3 70B</span>
+        <span>Streamlit</span>
       </div>
+
     </div>
+
   </div>
 </article>
 
-<!-- PROJECT 2 — FINANCE RAG ASSISTANT -->
+<!-- PROJECT 2 -->
 <article class="project" id="finance">
-  <canvas id="canvas-finance"></canvas>
+
+  <canvas id="canvas-finance" aria-hidden="true"></canvas>
+
   <div class="scrim"></div>
-  <span class="corner tl"></span><span class="corner br"></span>
-  <div class="hud" id="hud-finance"><div class="hl">RETRIEVING</div><div id="hud-finance-chunk">chunk_0000</div><div class="hl" id="hud-finance-score">faithfulness 0.00</div></div>
+
+  <span class="corner tl" aria-hidden="true"></span>
+  <span class="corner br" aria-hidden="true"></span>
+
+  <div class="hud" id="hud-finance">
+    <div class="hl">RETRIEVING</div>
+    <div id="hud-finance-chunk">chunk_0000</div>
+    <div class="hl" id="hud-finance-score">faithfulness 0.00</div>
+  </div>
+
   <div class="wrap project-inner">
+
     <div>
-      <div class="proj-id">PRJ_<b>02</b> / 2026 / RAG + EVALUATION</div>
-      <h3>Finance RAG<br>Assistant</h3>
-      <div class="proj-status">API + eval pipeline</div>
+
+      <div class="proj-id">
+        PRJ_<b>02</b> / 2026 / RAG + EVALUATION
+      </div>
+
+      <h3>
+        Finance RAG<br>
+        Assistant
+      </h3>
+
+      <div class="proj-status">
+        API + eval pipeline
+      </div>
+
       <div class="proj-stats">
-        <div><b>10-K</b><span>SEC filings indexed</span></div>
-        <div><b>2</b><span>Metrics: relevancy &amp; faithfulness</span></div>
-        <div><b>Local</b><span>LLM inference via Ollama</span></div>
+
+        <div>
+          <b>10-K</b>
+          <span>SEC filings indexed</span>
+        </div>
+
+        <div>
+          <b>2</b>
+          <span>Metrics: relevancy &amp; faithfulness</span>
+        </div>
+
+        <div>
+          <b>Local</b>
+          <span>LLM inference via Ollama</span>
+        </div>
+
       </div>
+
       <div class="proj-links">
-        <a class="btn alt" href="https://github.com/anushka-srivastavas/finance-rag-assistant" target="_blank" rel="noopener">View Code</a>
+
+        <a
+          class="btn alt"
+          href="https://github.com/anushka-srivastavas/finance-rag-assistant"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Code
+        </a>
+
       </div>
+
     </div>
+
     <div>
-      <p class="proj-desc">A retrieval-augmented Q&amp;A system over SEC 10-K filings. Documents are chunked, embedded with HuggingFace sentence-transformers, and indexed in FAISS — questions get answered by a locally-hosted Mistral model grounded in the retrieved filing text, served over a REST API.</p>
+
+      <p class="proj-desc">
+        A retrieval-augmented Q&amp;A system over SEC 10-K filings. Documents are chunked, embedded with HuggingFace sentence-transformers, and indexed in FAISS — questions get answered by a locally-hosted Mistral model grounded in the retrieved filing text, served over a REST API.
+      </p>
+
       <div class="proj-side">
-        <div style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Pipeline</div>
+
+        <div class="gname">
+          Pipeline
+        </div>
+
         <ul class="glist">
           <li>PDF loading &amp; chunking of 10-K filings</li>
           <li>HuggingFace embeddings → FAISS index</li>
           <li>Mistral (via Ollama) generates grounded answers</li>
           <li>Custom eval: retrieval relevancy + answer faithfulness</li>
         </ul>
+
       </div>
+
       <div class="proj-tags">
-        <span>LangChain</span><span>FAISS</span><span>HuggingFace</span><span>Mistral</span><span>FastAPI</span><span>Streamlit</span>
+        <span>LangChain</span>
+        <span>FAISS</span>
+        <span>HuggingFace</span>
+        <span>Mistral</span>
+        <span>FastAPI</span>
+        <span>Streamlit</span>
       </div>
+
     </div>
+
   </div>
 </article>
 
-<!-- PROJECT 3 — FRAUD DETECTION -->
+<!-- PROJECT 3 -->
 <article class="project" id="fraud">
-  <canvas id="canvas-fraud"></canvas>
+
+  <canvas id="canvas-fraud" aria-hidden="true"></canvas>
+
   <div class="scrim"></div>
-  <span class="corner tl"></span><span class="corner br"></span>
-  <div class="hud" id="hud-fraud"><div class="hl">MONITORING</div><div id="hud-fraud-tx">tx_0000000</div><div class="hl" id="hud-fraud-status">status: clear</div></div>
+
+  <span class="corner tl" aria-hidden="true"></span>
+  <span class="corner br" aria-hidden="true"></span>
+
+  <div class="hud" id="hud-fraud">
+    <div class="hl">MONITORING</div>
+    <div id="hud-fraud-tx">tx_0000000</div>
+    <div class="hl" id="hud-fraud-status">status: clear</div>
+  </div>
+
   <div class="wrap project-inner">
+
     <div>
-      <div class="proj-id">PRJ_<b>03</b> / 2025 / APPLIED ML + MLOPS</div>
-      <h3>Fraud<br>Detection</h3>
-      <div class="proj-status">Containerized API</div>
+
+      <div class="proj-id">
+        PRJ_<b>03</b> / 2025 / APPLIED ML + MLOPS
+      </div>
+
+      <h3>
+        Fraud<br>
+        Detection
+      </h3>
+
+      <div class="proj-status">
+        Containerized API
+      </div>
+
       <div class="proj-stats">
-        <div><b>92%</b><span>Recall on fraud class</span></div>
-        <div><b>&lt;1ms</b><span>Inference latency</span></div>
-        <div><b>284,807</b><span>Transactions analyzed</span></div>
+
+        <div>
+          <b>92%</b>
+          <span>Recall on fraud class</span>
+        </div>
+
+        <div>
+          <b>&lt;1ms</b>
+          <span>Inference latency</span>
+        </div>
+
+        <div>
+          <b>284,807</b>
+          <span>Transactions analyzed</span>
+        </div>
+
       </div>
+
       <div class="proj-links">
-        <a class="btn alt" href="https://github.com/anushka-srivastavas/fraud_detection" target="_blank" rel="noopener">View Code</a>
+
+        <a
+          class="btn alt"
+          href="https://github.com/anushka-srivastavas/fraud_detection"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Code
+        </a>
+
       </div>
+
     </div>
+
     <div>
-      <p class="proj-desc">A credit card fraud detection &amp; monitoring system trained on a heavily imbalanced transaction dataset (0.17% fraud rate). Feature engineering and SMOTE resampling boosted recall on the minority fraud class, deployed as a REST API with prediction logging for drift analysis.</p>
+
+      <p class="proj-desc">
+        A credit card fraud detection &amp; monitoring system trained on a heavily imbalanced transaction dataset (0.17% fraud rate). Feature engineering and SMOTE resampling boosted recall on the minority fraud class, deployed as a REST API with prediction logging for drift analysis.
+      </p>
+
       <div class="proj-side">
-        <div style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Pipeline</div>
+
+        <div class="gname">
+          Pipeline
+        </div>
+
         <ul class="glist">
           <li>Feature engineering + SMOTE for class imbalance</li>
           <li>Classifier evaluation tuned for fraud recall</li>
           <li>FastAPI + Docker deployment</li>
           <li>Prediction logging for model drift analysis</li>
         </ul>
+
       </div>
+
       <div class="proj-tags">
-        <span>Scikit-learn</span><span>Pandas</span><span>FastAPI</span><span>Docker</span><span>joblib</span>
+        <span>Scikit-learn</span>
+        <span>Pandas</span>
+        <span>FastAPI</span>
+        <span>Docker</span>
+        <span>joblib</span>
       </div>
+
     </div>
+
   </div>
 </article>
 
-<!-- PROJECT 4 — UNDERCUT F1 STRATEGY SIMULATOR -->
+<!-- PROJECT 4 -->
 <article class="project" id="undercut">
-  <canvas id="canvas-undercut"></canvas>
+
+  <canvas id="canvas-undercut" aria-hidden="true"></canvas>
+
   <div class="scrim"></div>
-  <span class="corner tl"></span><span class="corner br"></span>
+
+  <span class="corner tl" aria-hidden="true"></span>
+  <span class="corner br" aria-hidden="true"></span>
+
   <div class="hud" id="hud-undercut">
     <div class="hl">SIMULATING</div>
     <div id="hud-undercut-lap">lap 00 / 57</div>
     <div class="hl" id="hud-undercut-strategy">strategy: computing</div>
   </div>
+
   <div class="wrap project-inner">
+
     <div>
-      <div class="proj-id">PRJ_<b>04</b> / 2026 / MOTORSPORT AI + SIMULATION</div>
+
+      <div class="proj-id">
+        PRJ_<b>04</b> / 2026 / MOTORSPORT AI + SIMULATION
+      </div>
+
       <h3>Undercut</h3>
-      <div class="proj-status">Live &amp; deployed</div>
+
+      <div class="proj-status">
+        Live &amp; deployed
+      </div>
+
       <div class="proj-stats">
-        <div><b>15K+</b><span>Real race laps modeled</span></div>
-        <div><b>10K</b><span>Monte Carlo simulations</span></div>
-        <div><b>0.35s</b><span>Tire deg. MAE</span></div>
+
+        <div>
+          <b>15K+</b>
+          <span>Real race laps modeled</span>
+        </div>
+
+        <div>
+          <b>10K</b>
+          <span>Monte Carlo simulations</span>
+        </div>
+
+        <div>
+          <b>0.35s</b>
+          <span>Tire deg. MAE</span>
+        </div>
+
       </div>
+
       <div class="proj-links">
-        <a class="btn" href="https://undercut.streamlit.app" target="_blank" rel="noopener">Live Demo →</a>
-        <a class="btn alt" href="https://github.com/anushka-srivastavas/undercut" target="_blank" rel="noopener">View Code</a>
+
+        <a
+          class="btn"
+          href="https://undercut.streamlit.app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Live Demo →
+        </a>
+
+        <a
+          class="btn alt"
+          href="https://github.com/anushka-srivastavas/undercut"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Code
+        </a>
+
       </div>
+
     </div>
+
     <div>
-      <p class="proj-desc">A Monte Carlo pit-strategy simulator that quantifies whether a given pit call was optimal — in expected seconds and positions gained or lost. Tire degradation curves are fitted per circuit and compound using fixed-effects regression on real FastF1 lap data, correcting for fuel burnoff and driver skill. Safety car probability is modeled at decile resolution. Thousands of race simulations run per candidate pit lap to surface the optimal strategy under uncertainty.</p>
+
+      <p class="proj-desc">
+        A Monte Carlo pit-strategy simulator that quantifies whether a given pit call was optimal — in expected seconds and positions gained or lost. Tire degradation curves are fitted per circuit and compound using fixed-effects regression on real FastF1 lap data, correcting for fuel burnoff and driver skill. Safety car probability is modeled at decile resolution. Thousands of race simulations run per candidate pit lap to surface the optimal strategy under uncertainty.
+      </p>
+
       <div class="proj-side">
-        <div style="font-family:var(--font-mono);font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-faint);">Pipeline</div>
+
+        <div class="gname">
+          Pipeline
+        </div>
+
         <ul class="glist">
           <li>FastF1 API → 15,000+ real race laps across 4 circuits</li>
           <li>Fixed-effects regression for tire degradation modeling</li>
@@ -610,579 +1867,1840 @@ footer a:hover{ color:var(--lime); }
           <li>Monte Carlo simulator across candidate pit strategies</li>
           <li>Deployed as interactive Streamlit app</li>
         </ul>
+
       </div>
+
       <div class="proj-tags">
-        <span>Python</span><span>FastF1</span><span>Scikit-learn</span><span>Monte Carlo</span><span>Streamlit</span><span>Plotly</span>
+        <span>Python</span>
+        <span>FastF1</span>
+        <span>Scikit-learn</span>
+        <span>Monte Carlo</span>
+        <span>Streamlit</span>
+        <span>Plotly</span>
       </div>
+
     </div>
+
   </div>
 </article>
 
+<!-- RESEARCH -->
 <section class="research" id="research">
+
   <div class="research-card reveal">
-    <div class="rtag">Research · Nov 2025</div>
-    <h4>Advancements in Deep Learning &amp; Large Language Models</h4>
-    <p>An undergraduate research study analysing transformer scaling laws and fine-tuning strategies for production LLM deployment — presented and defended in a formal academic viva examination.</p>
+
+    <div class="rtag">
+      Research · Nov 2025
+    </div>
+
+    <h4>
+      Advancements in Deep Learning &amp; Large Language Models
+    </h4>
+
+    <p>
+      An undergraduate research study analysing transformer scaling laws and fine-tuning strategies for production LLM deployment — presented and defended in a formal academic viva examination.
+    </p>
+
     <div class="ptopics">
-      <span>Scaling laws</span><span>LoRA</span><span>Instruction tuning</span><span>RLHF</span><span>Constitutional AI</span>
+      <span>Scaling laws</span>
+      <span>LoRA</span>
+      <span>Instruction tuning</span>
+      <span>RLHF</span>
+      <span>Constitutional AI</span>
     </div>
+
   </div>
+
   <div class="certs reveal">
+
     <h5>// Certifications</h5>
+
     <div class="cert-item">
-      <div><div class="cname">Machine Learning Specialization</div><div class="cissuer">Stanford University / DeepLearning.AI — Andrew Ng</div></div>
+      <div>
+        <div class="cname">Machine Learning Specialization</div>
+        <div class="cissuer">
+          Stanford University / DeepLearning.AI — Andrew Ng
+        </div>
+      </div>
     </div>
+
     <div class="cert-item">
-      <div><div class="cname">Data Analysis</div><div class="cissuer">Women in Data (Dell Technologies)</div></div>
+      <div>
+        <div class="cname">Data Analysis</div>
+        <div class="cissuer">
+          Women in Data (Dell Technologies)
+        </div>
+      </div>
     </div>
+
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="contact" id="contact">
+
   <div class="wrap">
+
     <div class="contact-top reveal">
+
       <div class="eyebrow">// Get in touch</div>
-      <h2 style="margin-top:14px;">Let's build<br>something — <a href="mailto:anushkasrivastava.sri@gmail.com">say hi</a></h2>
+
+      <h2 style="margin-top:14px;">
+        Let's build<br>
+        something —
+        <a href="mailto:anushkasrivastava.sri@gmail.com">
+          say hi
+        </a>
+      </h2>
+
     </div>
+
     <div class="contact-grid">
+
       <div class="reveal">
+
         <div class="contact-links">
-          <a class="row" href="mailto:anushkasrivastava.sri@gmail.com"><span>Email</span><span>anushkasrivastava.sri@gmail.com</span></a>
-          <a class="row" href="https://www.linkedin.com/in/anushka-srivastava33" target="_blank" rel="noopener"><span>LinkedIn</span><span>/in/anushka-srivastava33</span></a>
-          <a class="row" href="https://github.com/anushka-srivastavas" target="_blank" rel="noopener"><span>GitHub</span><span>@anushka-srivastavas</span></a>
-          <a class="row" href="#top"><span>Location</span><span>New Delhi, India</span></a>
+
+          <a
+            class="row"
+            href="mailto:anushkasrivastava.sri@gmail.com"
+          >
+            <span>Email</span>
+            <span>anushkasrivastava.sri@gmail.com</span>
+          </a>
+
+          <a
+            class="row"
+            href="https://www.linkedin.com/in/anushka-srivastava33"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>LinkedIn</span>
+            <span>/in/anushka-srivastava33</span>
+          </a>
+
+          <a
+            class="row"
+            href="https://github.com/anushka-srivastavas"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>GitHub</span>
+            <span>@anushka-srivastavas</span>
+          </a>
+
+          <a class="row" href="#top">
+            <span>Location</span>
+            <span>New Delhi, India</span>
+          </a>
+
         </div>
+
       </div>
+
       <div class="reveal">
-        <form class="cform" id="cform">
-          <div class="field"><label for="cemail">Email</label><input id="cemail" name="email" type="email" required></div>
-          <div class="field"><label for="cmsg">Message</label><textarea id="cmsg" name="message" required></textarea></div>
-          <button class="btn" type="submit" id="cform-btn">Send Message →</button>
-          <div class="form-note" id="cform-note">Sent straight to my inbox — no redirect.</div>
+
+        <form
+          class="cform"
+          id="cform"
+          action="https://formspree.io/f/mzdqnqej"
+          method="POST"
+        >
+
+          <div class="field">
+
+            <label for="cemail">
+              Email
+            </label>
+
+            <input
+              id="cemail"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="your@email.com"
+              required
+            >
+
+          </div>
+
+          <div class="field">
+
+            <label for="cmsg">
+              Message
+            </label>
+
+            <textarea
+              id="cmsg"
+              name="message"
+              placeholder="Tell me what you're building..."
+              required
+            ></textarea>
+
+          </div>
+
+          <button
+            class="btn"
+            type="submit"
+            id="cform-btn"
+          >
+            Send Message →
+          </button>
+
+          <div
+            class="form-note"
+            id="cform-note"
+            aria-live="polite"
+          >
+            Sent straight to my inbox — no redirect.
+          </div>
+
         </form>
+
       </div>
+
     </div>
+
   </div>
 </section>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
-  <span>© 2026 Anushka Srivastava</span>
-  <button id="totop" aria-label="Back to top">↑</button>
+
+  <span>
+    © 2026 Anushka Srivastava
+  </span>
+
+  <button
+    id="totop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
+
 </footer>
 
 <script>
 (function(){
-"use strict";
-var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  "use strict";
 
-/* ---------- BOOT SEQUENCE ---------- */
-(function boot(){
-  var el = document.getElementById('boot');
-  var linesEl = document.getElementById('boot-lines');
-  if(sessionStorage.getItem('as_booted') || reduceMotion){
-    el.classList.add('hide');
-    return;
-  }
-  var lines = [
-    'initializing portfolio.exe',
-    'loading profile :: anushka_srivastava',
-    'mounting projects/ [artemis-atlas, finance-rag, fraud-detection]',
-    'status: <span>ready</span>'
-  ];
-  var i = 0;
-  function next(){
-    if(i >= lines.length){
-      setTimeout(function(){
-        el.classList.add('hide');
-        sessionStorage.setItem('as_booted','1');
-      }, 280);
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  /* =========================================================
+     BOOT SEQUENCE
+  ========================================================= */
+
+  (function boot(){
+
+    const el = document.getElementById("boot");
+    const linesEl = document.getElementById("boot-lines");
+
+    if(!el || !linesEl) return;
+
+    if(
+      sessionStorage.getItem("as_booted") ||
+      reduceMotion
+    ){
+      el.classList.add("hide");
       return;
     }
-    var row = document.createElement('div');
-    row.innerHTML = lines[i];
-    linesEl.appendChild(row);
-    i++;
-    setTimeout(next, 220);
-  }
-  var cursorRow = document.createElement('span');
-  cursorRow.className = 'cursor';
-  next();
-})();
 
-/* ---------- SCROLL REVEALS ---------- */
-var revealEls = document.querySelectorAll('.reveal, .reveal-stag');
-if('IntersectionObserver' in window){
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    });
-  }, {threshold:0.15, rootMargin:'0px 0px -60px 0px'});
-  revealEls.forEach(function(el){ io.observe(el); });
-} else {
-  revealEls.forEach(function(el){ el.classList.add('in'); });
-}
+    const lines = [
+      "initializing portfolio.exe",
+      "loading profile :: anushka_srivastava",
+      "mounting projects/ [artemis-atlas, finance-rag, fraud-detection]",
+      "status: <span>ready</span>"
+    ];
 
-/* ---------- HERO NAME REVEAL ---------- */
-window.addEventListener('load', function(){
-  document.querySelectorAll('.hero h1 .line span').forEach(function(s,idx){
-    s.style.transform = 'translateY(110%)';
-    s.style.transition = 'transform .9s cubic-bezier(.16,.84,.44,1)';
-    setTimeout(function(){ s.style.transform = 'translateY(0)'; }, 200 + idx*120);
-  });
-});
+    let index = 0;
 
-/* ---------- BACK TO TOP ---------- */
-document.getElementById('totop').addEventListener('click', function(){
-  window.scrollTo({top:0, behavior: reduceMotion ? 'auto' : 'smooth'});
-});
+    function next(){
 
-/* ---------- CONTACT FORM (mailto fallback) ---------- */
-document.getElementById('cform').addEventListener('submit', function(e){
-  e.preventDefault();
-  var form = e.target;
-  var btn = document.getElementById('cform-btn');
-  var note = document.getElementById('cform-note');
-  var email = document.getElementById('cemail').value;
-  var msg = document.getElementById('cmsg').value;
+      if(index >= lines.length){
 
-  btn.disabled = true;
-  btn.textContent = 'Sending…';
-  note.textContent = 'Sending your message…';
-  note.style.color = '';
+        const cursor = document.createElement("span");
+        cursor.className = "cursor";
+        linesEl.appendChild(cursor);
 
-  fetch('https://formspree.io/f/mzdqnqej', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({ email: email, message: msg })
-  })
-  .then(function(res){
-    if(res.ok){
-      form.reset();
-      btn.textContent = 'Send Message →';
-      btn.disabled = false;
-      note.textContent = 'Message sent — thanks for reaching out!';
-      note.style.color = 'var(--lime)';
-    } else {
-      return res.json().then(function(data){ throw new Error((data && data.error) || 'Something went wrong'); });
+        setTimeout(function(){
+
+          el.classList.add("hide");
+
+          try{
+            sessionStorage.setItem(
+              "as_booted",
+              "1"
+            );
+          }catch(error){}
+
+        },280);
+
+        return;
+      }
+
+      const row = document.createElement("div");
+      row.innerHTML = lines[index];
+
+      linesEl.appendChild(row);
+
+      index++;
+
+      setTimeout(next,220);
     }
-  })
-  .catch(function(err){
-    btn.textContent = 'Send Message →';
-    btn.disabled = false;
-    note.textContent = 'Could not send — please try again or email me directly.';
-    note.style.color = 'var(--flag)';
-  });
-});
 
-/* ============================================================
-   CANVAS HELPERS
-   ============================================================ */
-function fit(canvas){
-  var parent = canvas.parentElement;
-  var dpr = Math.min(window.devicePixelRatio || 1, 2);
-  var w = parent.clientWidth, h = parent.clientHeight;
-  canvas.width = w * dpr; canvas.height = h * dpr;
-  canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
-  var ctx = canvas.getContext('2d');
-  ctx.setTransform(dpr,0,0,dpr,0,0);
-  return {ctx:ctx, w:w, h:h};
-}
+    next();
 
-function runWhenVisible(canvas, startFn){
-  var running = false;
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(e.isIntersecting && !running){ running = true; startFn(); }
+  })();
+
+
+  /* =========================================================
+     SCROLL REVEALS
+  ========================================================= */
+
+  const revealEls = document.querySelectorAll(
+    ".reveal, .reveal-stag"
+  );
+
+  if("IntersectionObserver" in window){
+
+    const io = new IntersectionObserver(
+      function(entries){
+
+        entries.forEach(function(entry){
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add("in");
+
+            io.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold:.12,
+        rootMargin:"0px 0px -50px 0px"
+      }
+    );
+
+    revealEls.forEach(function(el){
+      io.observe(el);
     });
-  }, {threshold:0.05});
-  io.observe(canvas);
-}
 
-/* ============================================================
-   HERO AMBIENT STARFIELD
-   ============================================================ */
-(function heroField(){
-  var canvas = document.getElementById('hero-canvas');
-  if(!canvas) return;
-  var dims = fit(canvas);
-  var ctx = dims.ctx, W = dims.w, H = dims.h;
-  var stars = [];
-  var COUNT = reduceMotion ? 0 : 130;
-  for(var i=0;i<COUNT;i++){
-    stars.push({
-      x: Math.random()*W, y: Math.random()*H,
-      r: Math.random()*1.4 + 0.3,
-      vy: Math.random()*0.12 + 0.02,
-      a: Math.random()*0.6 + 0.2,
-      tw: Math.random()*Math.PI*2
+  }else{
+
+    revealEls.forEach(function(el){
+      el.classList.add("in");
     });
+
   }
-  function draw(){
-    ctx.clearRect(0,0,W,H);
-    for(var i=0;i<stars.length;i++){
-      var s = stars[i];
-      s.tw += 0.02;
-      var alpha = s.a + Math.sin(s.tw)*0.15;
-      ctx.beginPath();
-      ctx.fillStyle = 'rgba(200,255,77,' + Math.max(0,alpha*0.5) + ')';
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI*2);
-      ctx.fill();
-      ctx.beginPath();
-      ctx.fillStyle = 'rgba(238,241,236,' + Math.max(0,alpha) + ')';
-      ctx.arc(s.x, s.y, s.r*0.6, 0, Math.PI*2);
-      ctx.fill();
-      s.y += s.vy;
-      if(s.y > H){ s.y = -4; s.x = Math.random()*W; }
+
+
+  /* =========================================================
+     HERO NAME REVEAL
+  ========================================================= */
+
+  window.addEventListener("load",function(){
+
+    const spans = document.querySelectorAll(
+      ".hero h1 .line span"
+    );
+
+    spans.forEach(function(span,index){
+
+      if(reduceMotion){
+
+        span.style.transform = "translateY(0)";
+        return;
+
+      }
+
+      span.style.transform = "translateY(110%)";
+      span.style.transition =
+        "transform .9s cubic-bezier(.16,.84,.44,1)";
+
+      setTimeout(function(){
+
+        span.style.transform = "translateY(0)";
+
+      },200 + index * 120);
+
+    });
+
+  });
+
+
+  /* =========================================================
+     BACK TO TOP
+  ========================================================= */
+
+  const topButton = document.getElementById("totop");
+
+  if(topButton){
+
+    topButton.addEventListener(
+      "click",
+      function(){
+
+        window.scrollTo({
+          top:0,
+          behavior:reduceMotion ? "auto" : "smooth"
+        });
+
+      }
+    );
+
+  }
+
+
+  /* =========================================================
+     CONTACT FORM
+  ========================================================= */
+
+  const form = document.getElementById("cform");
+
+  if(form){
+
+    form.addEventListener(
+      "submit",
+      async function(event){
+
+        event.preventDefault();
+
+        const btn =
+          document.getElementById("cform-btn");
+
+        const note =
+          document.getElementById("cform-note");
+
+        const email =
+          document.getElementById("cemail").value.trim();
+
+        const message =
+          document.getElementById("cmsg").value.trim();
+
+        if(!email || !message){
+          return;
+        }
+
+        btn.disabled = true;
+        btn.textContent = "Sending…";
+
+        note.textContent =
+          "Sending your message…";
+
+        note.style.color = "";
+
+        try{
+
+          const response = await fetch(
+            form.action,
+            {
+              method:"POST",
+              body:new FormData(form),
+              headers:{
+                Accept:"application/json"
+              }
+            }
+          );
+
+          if(!response.ok){
+            throw new Error("Form submission failed");
+          }
+
+          form.reset();
+
+          btn.disabled = false;
+          btn.textContent =
+            "Send Message →";
+
+          note.textContent =
+            "Message sent — thanks for reaching out!";
+
+          note.style.color =
+            "var(--lime)";
+
+        }catch(error){
+
+          btn.disabled = false;
+          btn.textContent =
+            "Send Message →";
+
+          note.textContent =
+            "Could not send — please try again or email me directly.";
+
+          note.style.color =
+            "var(--flag)";
+
+          console.error(error);
+        }
+
+      }
+    );
+
+  }
+
+
+  /* =========================================================
+     CANVAS HELPERS
+  ========================================================= */
+
+  function fit(canvas){
+
+    const parent =
+      canvas.parentElement;
+
+    const dpr =
+      Math.min(window.devicePixelRatio || 1,2);
+
+    const width =
+      parent.clientWidth;
+
+    const height =
+      parent.clientHeight;
+
+    canvas.width =
+      Math.max(1,Math.floor(width*dpr));
+
+    canvas.height =
+      Math.max(1,Math.floor(height*dpr));
+
+    canvas.style.width =
+      width + "px";
+
+    canvas.style.height =
+      height + "px";
+
+    const ctx =
+      canvas.getContext("2d");
+
+    ctx.setTransform(
+      dpr,
+      0,
+      0,
+      dpr,
+      0,
+      0
+    );
+
+    return {
+      ctx:ctx,
+      w:width,
+      h:height
+    };
+  }
+
+
+  function runWhenVisible(canvas,startFn){
+
+    if(!canvas) return;
+
+    let running = false;
+
+    if(!("IntersectionObserver" in window)){
+
+      startFn();
+      return;
     }
-    if(!reduceMotion) requestAnimationFrame(draw);
+
+    const observer =
+      new IntersectionObserver(
+        function(entries){
+
+          entries.forEach(function(entry){
+
+            if(
+              entry.isIntersecting &&
+              !running
+            ){
+
+              running = true;
+
+              startFn();
+
+              observer.unobserve(canvas);
+            }
+
+          });
+
+        },
+        {
+          threshold:.05
+        }
+      );
+
+    observer.observe(canvas);
   }
-  draw();
-  window.addEventListener('resize', function(){
-    var d = fit(canvas); ctx = d.ctx; W = d.w; H = d.h;
-  });
-})();
 
-/* ============================================================
-   PROJECT 1 — ARTEMIS ATLAS: galaxy particle field + scan
-   ============================================================ */
-(function galaxyCanvas(){
-  var canvas = document.getElementById('canvas-galaxy');
-  if(!canvas) return;
-  var classes = ['Disturbed Galaxy','Merging Galaxy','Round Smooth Galaxy','In-between Round Smooth','Cigar Shaped Smooth','Barred Spiral Galaxy','Unbarred Tight Spiral','Unbarred Loose Spiral','Edge-on, no Bulge','Edge-on with Bulge'];
-  var hudClass = document.getElementById('hud-galaxy-class');
-  var hudConf = document.getElementById('hud-galaxy-conf');
 
-  function start(){
-    var dims = fit(canvas);
-    var ctx = dims.ctx, W = dims.w, H = dims.h;
-    var cx = W/2, cy = H/2;
-    var particles = [];
-    var COUNT = reduceMotion ? 0 : 240;
-    for(var i=0;i<COUNT;i++){
-      var ang = Math.random()*Math.PI*2;
-      var rad = Math.pow(Math.random(),0.5) * Math.min(W,H)*0.42;
-      particles.push({
-        ang: ang, rad: rad,
-        speed: (0.0011 + Math.random()*0.0014) * (rad<40?2.2:1),
-        size: Math.random()*1.6 + 0.4,
-        hue: Math.random()
+  /* =========================================================
+     HERO STARFIELD
+  ========================================================= */
+
+  (function heroField(){
+
+    const canvas =
+      document.getElementById("hero-canvas");
+
+    if(!canvas) return;
+
+    let dims = fit(canvas);
+
+    let ctx = dims.ctx;
+    let W = dims.w;
+    let H = dims.h;
+
+    const stars = [];
+
+    const COUNT =
+      reduceMotion ? 0 : 130;
+
+    for(let i=0;i<COUNT;i++){
+
+      stars.push({
+        x:Math.random()*W,
+        y:Math.random()*H,
+        r:Math.random()*1.4+.3,
+        vy:Math.random()*.12+.02,
+        a:Math.random()*.6+.2,
+        tw:Math.random()*Math.PI*2
       });
+
     }
-    var scanY = -50, scanDir = 1;
-    var classIdx = 0, lastSwitch = 0;
 
-    function draw(t){
-      ctx.clearRect(0,0,W,H);
-      cx = W/2; cy = H*0.46;
+    function draw(){
 
-      // spiral particles
-      for(var i=0;i<particles.length;i++){
-        var p = particles[i];
-        p.ang += p.speed;
-        var arm = Math.sin(p.ang*2)*0.18;
-        var x = cx + Math.cos(p.ang+arm)*p.rad;
-        var y = cy + Math.sin(p.ang+arm)*p.rad*0.55;
-        var nearScan = Math.abs(y - scanY) < 40;
+      ctx.clearRect(
+        0,
+        0,
+        W,
+        H
+      );
+
+      for(let i=0;i<stars.length;i++){
+
+        const s = stars[i];
+
+        s.tw += .02;
+
+        const alpha =
+          s.a + Math.sin(s.tw)*.15;
+
         ctx.beginPath();
-        ctx.fillStyle = nearScan ? 'rgba(200,255,77,0.9)' : 'rgba(238,241,236,' + (0.25 + (1-p.rad/(Math.min(W,H)*0.42))*0.5) + ')';
-        ctx.arc(x,y,p.size + (nearScan?0.8:0),0,Math.PI*2);
+
+        ctx.fillStyle =
+          "rgba(200,255,77," +
+          Math.max(0,alpha*.5) +
+          ")";
+
+        ctx.arc(
+          s.x,
+          s.y,
+          s.r,
+          0,
+          Math.PI*2
+        );
+
         ctx.fill();
-      }
-      // core glow
-      var grad = ctx.createRadialGradient(cx,cy,0,cx,cy,90);
-      grad.addColorStop(0,'rgba(200,255,77,0.18)');
-      grad.addColorStop(1,'rgba(200,255,77,0)');
-      ctx.fillStyle = grad;
-      ctx.beginPath(); ctx.arc(cx,cy,90,0,Math.PI*2); ctx.fill();
 
-      // scan line
-      if(!reduceMotion){
         ctx.beginPath();
-        ctx.strokeStyle = 'rgba(200,255,77,0.55)';
-        ctx.lineWidth = 1;
-        ctx.moveTo(0, scanY); ctx.lineTo(W, scanY);
-        ctx.stroke();
-        scanY += scanDir * 1.6;
-        if(scanY > H+40 || scanY < -40) scanDir *= -1;
+
+        ctx.fillStyle =
+          "rgba(238,241,236," +
+          Math.max(0,alpha) +
+          ")";
+
+        ctx.arc(
+          s.x,
+          s.y,
+          s.r*.6,
+          0,
+          Math.PI*2
+        );
+
+        ctx.fill();
+
+        s.y += s.vy;
+
+        if(s.y > H){
+          s.y = -4;
+          s.x = Math.random()*W;
+        }
+
       }
 
-      if(!t) t = 0;
-      if(t - lastSwitch > 1400){
-        classIdx = (classIdx+1) % classes.length;
-        lastSwitch = t;
-        if(hudClass) hudClass.textContent = classes[classIdx];
-        if(hudConf) hudConf.textContent = 'conf ' + (60 + Math.random()*38).toFixed(1) + '%';
-      }
-      if(!reduceMotion) requestAnimationFrame(draw);
-    }
-    if(hudClass) hudClass.textContent = classes[0];
-    if(hudConf) hudConf.textContent = 'conf ' + (60 + Math.random()*38).toFixed(1) + '%';
-    draw(0);
-    window.addEventListener('resize', function(){
-      var d = fit(canvas); ctx = d.ctx; W = d.w; H = d.h;
-    });
-  }
-  runWhenVisible(canvas, start);
-})();
-
-/* ============================================================
-   PROJECT 2 — FINANCE RAG: chunks flowing into a vector index
-   ============================================================ */
-(function financeCanvas(){
-  var canvas = document.getElementById('canvas-finance');
-  if(!canvas) return;
-  var hudChunk = document.getElementById('hud-finance-chunk');
-  var hudScore = document.getElementById('hud-finance-score');
-
-  function start(){
-    var dims = fit(canvas);
-    var ctx = dims.ctx, W = dims.w, H = dims.h;
-    var nodeX, nodeY;
-    var packets = [];
-    function spawn(){
-      var edge = Math.floor(Math.random()*4);
-      var x,y;
-      if(edge===0){ x=0; y=Math.random()*H; }
-      else if(edge===1){ x=W; y=Math.random()*H; }
-      else if(edge===2){ x=Math.random()*W; y=0; }
-      else { x=Math.random()*W; y=H; }
-      packets.push({x:x,y:y,t:0,dur: 90+Math.random()*60});
-    }
-    var spawnTimer = 0;
-    var gridOffset = 0;
-    var chunkN = 0, lastChunk = 0;
-
-    function draw(t){
-      ctx.clearRect(0,0,W,H);
-      nodeX = W*0.74; nodeY = H*0.62;
-
-      // background grid
-      if(!reduceMotion) gridOffset = (gridOffset + 0.15) % 36;
-      ctx.strokeStyle = 'rgba(110,184,255,0.06)';
-      ctx.lineWidth = 1;
-      for(var gx=-36+gridOffset; gx<W; gx+=36){
-        ctx.beginPath(); ctx.moveTo(gx,0); ctx.lineTo(gx,H); ctx.stroke();
-      }
-      for(var gy=-36+gridOffset; gy<H; gy+=36){
-        ctx.beginPath(); ctx.moveTo(0,gy); ctx.lineTo(W,gy); ctx.stroke();
-      }
-
-      // central vector index node
-      var pulse = 22 + Math.sin(t/400)*4;
-      var grad = ctx.createRadialGradient(nodeX,nodeY,0,nodeX,nodeY,80);
-      grad.addColorStop(0,'rgba(200,255,77,0.12)');
-      grad.addColorStop(1,'rgba(200,255,77,0)');
-      ctx.fillStyle = grad;
-      ctx.beginPath(); ctx.arc(nodeX,nodeY,80,0,Math.PI*2); ctx.fill();
-      ctx.strokeStyle = 'rgba(200,255,77,0.45)';
-      ctx.lineWidth = 1.4;
-      ctx.beginPath(); ctx.arc(nodeX,nodeY,pulse,0,Math.PI*2); ctx.stroke();
-      ctx.beginPath(); ctx.arc(nodeX,nodeY,pulse*0.5,0,Math.PI*2); ctx.stroke();
-
-      // packets flowing inward
       if(!reduceMotion){
-        spawnTimer++;
-        if(spawnTimer > 26){ spawn(); spawnTimer = 0; }
-        for(var i=packets.length-1;i>=0;i--){
-          var p = packets[i];
-          p.t++;
-          var f = Math.min(p.t / p.dur, 1);
-          var ix = p.x + (nodeX - p.x)*f;
-          var iy = p.y + (nodeY - p.y)*f;
+        requestAnimationFrame(draw);
+      }
+
+    }
+
+    draw();
+
+    let resizeTimer;
+
+    window.addEventListener(
+      "resize",
+      function(){
+
+        clearTimeout(resizeTimer);
+
+        resizeTimer = setTimeout(
+          function(){
+
+            dims = fit(canvas);
+
+            ctx = dims.ctx;
+            W = dims.w;
+            H = dims.h;
+
+          },
+          120
+        );
+
+      }
+    );
+
+  })();
+
+
+  /* =========================================================
+     PROJECT 1 — GALAXY
+  ========================================================= */
+
+  (function galaxyCanvas(){
+
+    const canvas =
+      document.getElementById("canvas-galaxy");
+
+    if(!canvas) return;
+
+    const classes = [
+      "Disturbed Galaxy",
+      "Merging Galaxy",
+      "Round Smooth Galaxy",
+      "In-between Round Smooth",
+      "Cigar Shaped Smooth",
+      "Barred Spiral Galaxy",
+      "Unbarred Tight Spiral",
+      "Unbarred Loose Spiral",
+      "Edge-on, no Bulge",
+      "Edge-on with Bulge"
+    ];
+
+    const hudClass =
+      document.getElementById(
+        "hud-galaxy-class"
+      );
+
+    const hudConf =
+      document.getElementById(
+        "hud-galaxy-conf"
+      );
+
+    function start(){
+
+      let dims = fit(canvas);
+
+      let ctx = dims.ctx;
+      let W = dims.w;
+      let H = dims.h;
+
+      let cx = W/2;
+      let cy = H/2;
+
+      const particles = [];
+
+      const COUNT =
+        reduceMotion ? 0 : 240;
+
+      for(let i=0;i<COUNT;i++){
+
+        particles.push({
+          ang:Math.random()*Math.PI*2,
+          rad:
+            Math.pow(Math.random(),.5) *
+            Math.min(W,H)*.42,
+          speed:
+            (.0011+Math.random()*.0014),
+          size:
+            Math.random()*1.6+.4
+        });
+
+      }
+
+      let scanY = -50;
+      let scanDir = 1;
+
+      let classIdx = 0;
+      let lastSwitch = 0;
+
+      function draw(t){
+
+        ctx.clearRect(
+          0,
+          0,
+          W,
+          H
+        );
+
+        cx = W/2;
+        cy = H*.46;
+
+        for(let i=0;i<particles.length;i++){
+
+          const p = particles[i];
+
+          p.ang +=
+            p.speed *
+            (p.rad < 40 ? 2.2 : 1);
+
+          const arm =
+            Math.sin(p.ang*2)*.18;
+
+          const x =
+            cx +
+            Math.cos(p.ang+arm) *
+            p.rad;
+
+          const y =
+            cy +
+            Math.sin(p.ang+arm) *
+            p.rad*.55;
+
+          const nearScan =
+            Math.abs(y-scanY)<40;
+
           ctx.beginPath();
-          ctx.fillStyle = 'rgba(110,184,255,' + (0.8*(1-f)+0.2) + ')';
-          ctx.arc(ix,iy,2.2,0,Math.PI*2);
+
+          ctx.fillStyle =
+            nearScan
+              ? "rgba(200,255,77,.9)"
+              : "rgba(238,241,236," +
+                (
+                  .25 +
+                  (1-p.rad/(Math.min(W,H)*.42))*.5
+                ) +
+                ")";
+
+          ctx.arc(
+            x,
+            y,
+            p.size+(nearScan?.8:0),
+            0,
+            Math.PI*2
+          );
+
           ctx.fill();
-          if(f>=1) packets.splice(i,1);
         }
-        if(t - lastChunk > 900){
-          chunkN++; lastChunk = t;
-          if(hudChunk) hudChunk.textContent = 'chunk_' + String(chunkN).padStart(4,'0');
-          if(hudScore) hudScore.textContent = 'faithfulness ' + (0.81 + Math.random()*0.16).toFixed(2);
-        }
-      }
-      if(!reduceMotion) requestAnimationFrame(draw);
-    }
-    if(hudChunk) hudChunk.textContent = 'chunk_0001';
-    draw(0);
-    window.addEventListener('resize', function(){
-      var d = fit(canvas); ctx = d.ctx; W = d.w; H = d.h;
-    });
-  }
-  runWhenVisible(canvas, start);
-})();
 
-/* ============================================================
-   PROJECT 3 — FRAUD DETECTION: pulsing transaction grid
-   ============================================================ */
-(function fraudCanvas(){
-  var canvas = document.getElementById('canvas-fraud');
-  if(!canvas) return;
-  var hudTx = document.getElementById('hud-fraud-tx');
-  var hudStatus = document.getElementById('hud-fraud-status');
+        const grad =
+          ctx.createRadialGradient(
+            cx,
+            cy,
+            0,
+            cx,
+            cy,
+            90
+          );
 
-  function start(){
-    var dims = fit(canvas);
-    var ctx = dims.ctx, W = dims.w, H = dims.h;
-    var cols, rows, cellW, cellH, cells;
+        grad.addColorStop(
+          0,
+          "rgba(200,255,77,.18)"
+        );
 
-    function buildGrid(){
-      cellW = 34; cellH = 34;
-      cols = Math.ceil(W/cellW)+1; rows = Math.ceil(H/cellH)+1;
-      cells = [];
-      for(var r=0;r<rows;r++){
-        for(var c=0;c<cols;c++){
-          cells.push({x:c*cellW, y:r*cellH, life:Math.random()*0.5, flag:0});
-        }
-      }
-    }
-    buildGrid();
-    var txN = 0, lastTx = 0;
+        grad.addColorStop(
+          1,
+          "rgba(200,255,77,0)"
+        );
 
-    function draw(t){
-      ctx.clearRect(0,0,W,H);
-      for(var i=0;i<cells.length;i++){
-        var c = cells[i];
-        if(!reduceMotion){
-          c.life += 0.004 + Math.random()*0.002;
-          if(c.flag>0) c.flag -= 0.035;
-          if(Math.random() < 0.00006) c.flag = 1;
-        }
-        var pulse = (Math.sin(c.life*3)+1)/2;
-        var col = c.flag>0 ? 'rgba(255,84,105,' + (0.1+c.flag*0.4) + ')' : 'rgba(200,255,77,' + (0.03+pulse*0.06) + ')';
-        ctx.fillStyle = col;
-        ctx.fillRect(c.x+1.5, c.y+1.5, cellW-3, cellH-3);
-        if(c.flag > 0.6){
-          ctx.strokeStyle = 'rgba(255,84,105,0.9)';
-          ctx.lineWidth = 1;
-          ctx.strokeRect(c.x+1.5, c.y+1.5, cellW-3, cellH-3);
-        }
-      }
-      if(!reduceMotion && t - lastTx > 480){
-        txN++; lastTx = t;
-        var flaggedNow = Math.random() < 0.12;
-        if(hudTx) hudTx.textContent = 'tx_' + String(1000000+txN).slice(0,9);
-        if(hudStatus) hudStatus.textContent = flaggedNow ? 'status: flagged' : 'status: clear';
-        if(hudStatus) hudStatus.style.color = flaggedNow ? 'var(--flag)' : 'var(--ink-dim)';
-      }
-      if(!reduceMotion) requestAnimationFrame(draw);
-    }
-    draw(0);
-    window.addEventListener('resize', function(){
-      var d = fit(canvas); ctx = d.ctx; W = d.w; H = d.h;
-      buildGrid();
-    });
-  }
-  runWhenVisible(canvas, start);
-})();
-
-/* ============================================================
-   PROJECT 4 — UNDERCUT: F1 race track animation
-   ============================================================ */
-(function undercutCanvas(){
-  var canvas = document.getElementById('canvas-undercut');
-  if(!canvas) return;
-  var hudLap = document.getElementById('hud-undercut-lap');
-  var hudStrategy = document.getElementById('hud-undercut-strategy');
-  var strategies = ['pit now: optimal','pit +3: suboptimal','stay out: risky','undercut: recommended'];
-
-  function start(){
-    var dims = fit(canvas);
-    var ctx = dims.ctx, W = dims.w, H = dims.h;
-    var cars = [];
-    var COUNT = reduceMotion ? 0 : 18;
-    for(var i=0;i<COUNT;i++){
-      var ang = Math.random()*Math.PI*2;
-      cars.push({
-        ang: ang,
-        speed: 0.008 + Math.random()*0.006,
-        rx: W*0.38, ry: H*0.28,
-        cx: W/2, cy: H/2,
-        size: Math.random()*2 + 1.5,
-        col: Math.random() < 0.15 ? 'rgba(255,84,105,0.9)' : 'rgba(200,255,77,0.7)',
-        trail: []
-      });
-    }
-    var lapN = 0, lastLap = 0, stratIdx = 0;
-
-    function draw(t){
-      ctx.clearRect(0,0,W,H);
-
-      // track outline
-      ctx.strokeStyle = 'rgba(200,255,77,0.12)';
-      ctx.lineWidth = 18;
-      ctx.beginPath();
-      ctx.ellipse(W/2, H/2, W*0.38, H*0.28, 0, 0, Math.PI*2);
-      ctx.stroke();
-
-      ctx.strokeStyle = 'rgba(200,255,77,0.06)';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.ellipse(W/2, H/2, W*0.38+12, H*0.28+8, 0, 0, Math.PI*2);
-      ctx.stroke();
-      ctx.beginPath();
-      ctx.ellipse(W/2, H/2, W*0.38-12, H*0.28-8, 0, 0, Math.PI*2);
-      ctx.stroke();
-
-      // pit lane indicator
-      ctx.strokeStyle = 'rgba(110,184,255,0.4)';
-      ctx.lineWidth = 2;
-      ctx.beginPath();
-      ctx.moveTo(W/2, H/2 + H*0.28 - 20);
-      ctx.lineTo(W/2, H/2 + H*0.28 + 30);
-      ctx.stroke();
-      ctx.font = '0.6rem JetBrains Mono, monospace';
-      ctx.fillStyle = 'rgba(110,184,255,0.5)';
-      ctx.fillText('PIT', W/2 - 10, H/2 + H*0.28 + 44);
-
-      // cars
-      for(var i=0;i<cars.length;i++){
-        var c = cars[i];
-        if(!reduceMotion) c.ang += c.speed;
-        var x = c.cx + Math.cos(c.ang)*c.rx;
-        var y = c.cy + Math.sin(c.ang)*c.ry;
-        c.trail.push({x:x,y:y});
-        if(c.trail.length > 12) c.trail.shift();
-
-        for(var j=0;j<c.trail.length-1;j++){
-          var alpha = (j/c.trail.length)*0.4;
-          ctx.beginPath();
-          ctx.strokeStyle = c.col.replace('0.7',''+alpha).replace('0.9',''+alpha);
-          ctx.lineWidth = c.size*0.6;
-          ctx.moveTo(c.trail[j].x, c.trail[j].y);
-          ctx.lineTo(c.trail[j+1].x, c.trail[j+1].y);
-          ctx.stroke();
-        }
+        ctx.fillStyle = grad;
 
         ctx.beginPath();
-        ctx.fillStyle = c.col;
-        ctx.arc(x, y, c.size, 0, Math.PI*2);
-        ctx.fill();
-      }
 
-      if(!reduceMotion && t - lastLap > 1200){
-        lapN = (lapN+1) % 57;
-        lastLap = t;
-        if(hudLap) hudLap.textContent = 'lap ' + String(lapN+1).padStart(2,'0') + ' / 57';
-        if(lapN % 4 === 0){
-          stratIdx = (stratIdx+1) % strategies.length;
-          if(hudStrategy) hudStrategy.textContent = 'strategy: ' + strategies[stratIdx];
+        ctx.arc(
+          cx,
+          cy,
+          90,
+          0,
+          Math.PI*2
+        );
+
+        ctx.fill();
+
+        if(!reduceMotion){
+
+          ctx.beginPath();
+
+          ctx.strokeStyle =
+            "rgba(200,255,77,.55)";
+
+          ctx.lineWidth = 1;
+
+          ctx.moveTo(0,scanY);
+          ctx.lineTo(W,scanY);
+
+          ctx.stroke();
+
+          scanY += scanDir*1.6;
+
+          if(
+            scanY > H+40 ||
+            scanY < -40
+          ){
+            scanDir *= -1;
+          }
+
+        }
+
+        if(
+          !reduceMotion &&
+          t-lastSwitch>1400
+        ){
+
+          classIdx =
+            (classIdx+1)%classes.length;
+
+          lastSwitch=t;
+
+          if(hudClass){
+            hudClass.textContent =
+              classes[classIdx];
+          }
+
+          if(hudConf){
+            hudConf.textContent =
+              "conf " +
+              (
+                60+Math.random()*38
+              ).toFixed(1) +
+              "%";
+          }
+
+        }
+
+        if(!reduceMotion){
+          requestAnimationFrame(draw);
         }
       }
-      if(!reduceMotion) requestAnimationFrame(draw);
+
+      if(hudClass){
+        hudClass.textContent =
+          classes[0];
+      }
+
+      if(hudConf){
+        hudConf.textContent =
+          "conf " +
+          (
+            60+Math.random()*38
+          ).toFixed(1) +
+          "%";
+      }
+
+      draw(0);
+
+      let resizeTimer;
+
+      window.addEventListener(
+        "resize",
+        function(){
+
+          clearTimeout(resizeTimer);
+
+          resizeTimer =
+            setTimeout(
+              function(){
+
+                dims=fit(canvas);
+
+                ctx=dims.ctx;
+                W=dims.w;
+                H=dims.h;
+
+              },
+              120
+            );
+
+        }
+      );
+
     }
-    if(hudLap) hudLap.textContent = 'lap 01 / 57';
-    if(hudStrategy) hudStrategy.textContent = 'strategy: computing';
-    draw(0);
-    window.addEventListener('resize', function(){
-      var d = fit(canvas); ctx = d.ctx; W = d.w; H = d.h;
-    });
-  }
-  runWhenVisible(canvas, start);
+
+    runWhenVisible(canvas,start);
+
+  })();
+
+
+  /* =========================================================
+     PROJECT 2 — FINANCE RAG
+  ========================================================= */
+
+  (function financeCanvas(){
+
+    const canvas =
+      document.getElementById(
+        "canvas-finance"
+      );
+
+    if(!canvas) return;
+
+    const hudChunk =
+      document.getElementById(
+        "hud-finance-chunk"
+      );
+
+    const hudScore =
+      document.getElementById(
+        "hud-finance-score"
+      );
+
+    function start(){
+
+      let dims = fit(canvas);
+
+      let ctx = dims.ctx;
+      let W = dims.w;
+      let H = dims.h;
+
+      let nodeX;
+      let nodeY;
+
+      const packets = [];
+
+      let spawnTimer = 0;
+      let gridOffset = 0;
+
+      let chunkN = 0;
+      let lastChunk = 0;
+
+      function spawn(){
+
+        const edge =
+          Math.floor(Math.random()*4);
+
+        let x;
+        let y;
+
+        if(edge===0){
+          x=0;
+          y=Math.random()*H;
+        }else if(edge===1){
+          x=W;
+          y=Math.random()*H;
+        }else if(edge===2){
+          x=Math.random()*W;
+          y=0;
+        }else{
+          x=Math.random()*W;
+          y=H;
+        }
+
+        packets.push({
+          x:x,
+          y:y,
+          t:0,
+          dur:90+Math.random()*60
+        });
+
+      }
+
+      function draw(t){
+
+        ctx.clearRect(
+          0,
+          0,
+          W,
+          H
+        );
+
+        nodeX=W*.74;
+        nodeY=H*.62;
+
+        if(!reduceMotion){
+          gridOffset =
+            (gridOffset+.15)%36;
+        }
+
+        ctx.strokeStyle =
+          "rgba(110,184,255,.06)";
+
+        ctx.lineWidth=1;
+
+        for(
+          let gx=-36+gridOffset;
+          gx<W;
+          gx+=36
+        ){
+
+          ctx.beginPath();
+          ctx.moveTo(gx,0);
+          ctx.lineTo(gx,H);
+          ctx.stroke();
+
+        }
+
+        for(
+          let gy=-36+gridOffset;
+          gy<H;
+          gy+=36
+        ){
+
+          ctx.beginPath();
+          ctx.moveTo(0,gy);
+          ctx.lineTo(W,gy);
+          ctx.stroke();
+
+        }
+
+        const pulse =
+          22+Math.sin(t/400)*4;
+
+        const grad =
+          ctx.createRadialGradient(
+            nodeX,
+            nodeY,
+            0,
+            nodeX,
+            nodeY,
+            80
+          );
+
+        grad.addColorStop(
+          0,
+          "rgba(200,255,77,.12)"
+        );
+
+        grad.addColorStop(
+          1,
+          "rgba(200,255,77,0)"
+        );
+
+        ctx.fillStyle=grad;
+
+        ctx.beginPath();
+
+        ctx.arc(
+          nodeX,
+          nodeY,
+          80,
+          0,
+          Math.PI*2
+        );
+
+        ctx.fill();
+
+        ctx.strokeStyle =
+          "rgba(200,255,77,.45)";
+
+        ctx.lineWidth=1.4;
+
+        ctx.beginPath();
+
+        ctx.arc(
+          nodeX,
+          nodeY,
+          pulse,
+          0,
+          Math.PI*2
+        );
+
+        ctx.stroke();
+
+        ctx.beginPath();
+
+        ctx.arc(
+          nodeX,
+          nodeY,
+          pulse*.5,
+          0,
+          Math.PI*2
+        );
+
+        ctx.stroke();
+
+        if(!reduceMotion){
+
+          spawnTimer++;
+
+          if(spawnTimer>26){
+            spawn();
+            spawnTimer=0;
+          }
+
+          for(
+            let i=packets.length-1;
+            i>=0;
+            i--
+          ){
+
+            const p=packets[i];
+
+            p.t++;
+
+            const f =
+              Math.min(
+                p.t/p.dur,
+                1
+              );
+
+            const ix =
+              p.x+
+              (nodeX-p.x)*f;
+
+            const iy =
+              p.y+
+              (nodeY-p.y)*f;
+
+            ctx.beginPath();
+
+            ctx.fillStyle =
+              "rgba(110,184,255," +
+              (.8*(1-f)+.2) +
+              ")";
+
+            ctx.arc(
+              ix,
+              iy,
+              2.2,
+              0,
+              Math.PI*2
+            );
+
+            ctx.fill();
+
+            if(f>=1){
+              packets.splice(i,1);
+            }
+
+          }
+
+          if(t-lastChunk>900){
+
+            chunkN++;
+            lastChunk=t;
+
+            if(hudChunk){
+              hudChunk.textContent =
+                "chunk_" +
+                String(chunkN)
+                  .padStart(4,"0");
+            }
+
+            if(hudScore){
+              hudScore.textContent =
+                "faithfulness " +
+                (
+                  .81+
+                  Math.random()*.16
+                ).toFixed(2);
+            }
+
+          }
+
+        }
+
+        if(!reduceMotion){
+          requestAnimationFrame(draw);
+        }
+
+      }
+
+      if(hudChunk){
+        hudChunk.textContent =
+          "chunk_0001";
+      }
+
+      draw(0);
+
+      let resizeTimer;
+
+      window.addEventListener(
+        "resize",
+        function(){
+
+          clearTimeout(resizeTimer);
+
+          resizeTimer =
+            setTimeout(
+              function(){
+
+                dims=fit(canvas);
+
+                ctx=dims.ctx;
+                W=dims.w;
+                H=dims.h;
+
+              },
+              120
+            );
+
+        }
+      );
+
+    }
+
+    runWhenVisible(canvas,start);
+
+  })();
+
+
+  /* =========================================================
+     PROJECT 3 — FRAUD
+  ========================================================= */
+
+  (function fraudCanvas(){
+
+    const canvas =
+      document.getElementById(
+        "canvas-fraud"
+      );
+
+    if(!canvas) return;
+
+    const hudTx =
+      document.getElementById(
+        "hud-fraud-tx"
+      );
+
+    const hudStatus =
+      document.getElementById(
+        "hud-fraud-status"
+      );
+
+    function start(){
+
+      let dims=fit(canvas);
+
+      let ctx=dims.ctx;
+      let W=dims.w;
+      let H=dims.h;
+
+      let cols;
+      let rows;
+      let cellW;
+      let cellH;
+      let cells=[];
+
+      function buildGrid(){
+
+        cellW=34;
+        cellH=34;
+
+        cols=
+          Math.ceil(W/cellW)+1;
+
+        rows=
+          Math.ceil(H/cellH)+1;
+
+        cells=[];
+
+        for(
+          let r=0;
+          r<rows;
+          r++
+        ){
+
+          for(
+            let c=0;
+            c<cols;
+            c++
+          ){
+
+            cells.push({
+              x:c*cellW,
+              y:r*cellH,
+              life:Math.random()*.5,
+              flag:0
+            });
+
+          }
+
+        }
+
+      }
+
+      buildGrid();
+
+      let txN=0;
+      let lastTx=0;
+
+      function draw(t){
+
+        ctx.clearRect(
+          0,
+          0,
+          W,
+          H
+        );
+
+        for(let i=0;i<cells.length;i++){
+
+          const cell=cells[i];
+
+          if(!reduceMotion){
+
+            cell.life +=
+              .004+
+              Math.random()*.002;
+
+            if(cell.flag>0){
+              cell.flag -= .035;
+            }
+
+            if(Math.random()<.00006){
+              cell.flag=1;
+            }
+
+          }
+
+          const pulse =
+            (
+              Math.sin(cell.life*3)+1
+            )/2;
+
+          const col =
+            cell.flag>0
+              ? "rgba(255,84,105,"+
+                (.1+cell.flag*.4)+")"
+              : "rgba(200,255,77,"+
+                (.03+pulse*.06)+")";
+
+          ctx.fillStyle=col;
+
+          ctx.fillRect(
+            cell.x+1.5,
+            cell.y+1.5,
+            cellW-3,
+            cellH-3
+          );
+
+          if(cell.flag>.6){
+
+            ctx.strokeStyle =
+              "rgba(255,84,105,.9)";
+
+            ctx.lineWidth=1;
+
+            ctx.strokeRect(
+              cell.x+1.5,
+              cell.y+1.5,
+              cellW-3,
+              cellH-3
+            );
+
+          }
+
+        }
+
+        if(
+          !reduceMotion &&
+          t-lastTx>480
+        ){
+
+          txN++;
+          lastTx=t;
+
+          const flaggedNow =
+            Math.random()<.12;
+
+          if(hudTx){
+
+            hudTx.textContent =
+              "tx_" +
+              String(
+                1000000+txN
+              ).slice(0,9);
+
+          }
+
+          if(hudStatus){
+
+            hudStatus.textContent =
+              flaggedNow
+                ? "status: flagged"
+                : "status: clear";
+
+            hudStatus.style.color =
+              flaggedNow
+                ? "var(--flag)"
+                : "var(--ink-dim)";
+
+          }
+
+        }
+
+        if(!reduceMotion){
+          requestAnimationFrame(draw);
+        }
+
+      }
+
+      draw(0);
+
+      let resizeTimer;
+
+      window.addEventListener(
+        "resize",
+        function(){
+
+          clearTimeout(resizeTimer);
+
+          resizeTimer =
+            setTimeout(
+              function(){
+
+                dims=fit(canvas);
+
+                ctx=dims.ctx;
+                W=dims.w;
+                H=dims.h;
+
+                buildGrid();
+
+              },
+              120
+            );
+
+        }
+      );
+
+    }
+
+    runWhenVisible(canvas,start);
+
+  })();
+
+
+  /* =========================================================
+     PROJECT 4 — UNDERCUT F1
+  ========================================================= */
+
+  (function undercutCanvas(){
+
+    const canvas =
+      document.getElementById(
+        "canvas-undercut"
+      );
+
+    if(!canvas) return;
+
+    const hudLap =
+      document.getElementById(
+        "hud-undercut-lap"
+      );
+
+    const hudStrategy =
+      document.getElementById(
+        "hud-undercut-strategy"
+      );
+
+    const strategies=[
+      "pit now: optimal",
+      "pit +3: suboptimal",
+      "stay out: risky",
+      "undercut: recommended"
+    ];
+
+    function start(){
+
+      let dims=fit(canvas);
+
+      let ctx=dims.ctx;
+      let W=dims.w;
+      let H=dims.h;
+
+      const cars=[];
+
+      const COUNT =
+        reduceMotion ? 0 : 18;
+
+      for(let i=0;i<COUNT;i++){
+
+        const isRed =
+          Math.random()<.15;
+
+        cars.push({
+          ang:Math.random()*Math.PI*2,
+          speed:.008+Math.random()*.006,
+          rx:W*.38,
+          ry:H*.28,
+          cx:W/2,
+          cy:H/2,
+          size:Math.random()*2+1.5,
+          red:isRed,
+          trail:[]
+        });
+
+      }
+
+      let lapN=0;
+      let lastLap=0;
+      let stratIdx=0;
+
+      function draw(t){
+
+        ctx.clearRect(
+          0,
+          0,
+          W,
+          H
+        );
+
+        ctx.strokeStyle =
+          "rgba(200,255,77,.12)";
+
+        ctx.lineWidth=18;
+
+        ctx.beginPath();
+
+        ctx.ellipse(
+          W/2,
+          H/2,
+          W*.38,
+          H*.28,
+          0,
+          0,
+          Math.PI*2
+        );
+
+        ctx.stroke();
+
+        ctx.strokeStyle =
+          "rgba(200,255,77,.06)";
+
+        ctx.lineWidth=2;
+
+        ctx.beginPath();
+
+        ctx.ellipse(
+          W/2,
+          H/2,
+          W*.38+12,
+          H*.28+8,
+          0,
+          0,
+          Math.PI*2
+        );
+
+        ctx.stroke();
+
+        ctx.beginPath();
+
+        ctx.ellipse(
+          W/2,
+          H/2,
+          W*.38-12,
+          H*.28-8,
+          0,
+          0,
+          Math.PI*2
+        );
+
+        ctx.stroke();
+
+        ctx.strokeStyle =
+          "rgba(110,184,255,.4)";
+
+        ctx.lineWidth=2;
+
+        ctx.beginPath();
+
+        ctx.moveTo(
+          W/2,
+          H/2+H*.28-20
+        );
+
+        ctx.lineTo(
+          W/2,
+          H/2+H*.28+30
+        );
+
+        ctx.stroke();
+
+        ctx.font =
+          "10px JetBrains Mono, monospace";
+
+        ctx.fillStyle =
+          "rgba(110,184,255,.5)";
+
+        ctx.fillText(
+          "PIT",
+          W/2-10,
+          H/2+H*.28+44
+        );
+
+        for(let i=0;i<cars.length;i++){
+
+          const car=cars[i];
+
+          if(!reduceMotion){
+            car.ang+=car.speed;
+          }
+
+          const x =
+            car.cx+
+            Math.cos(car.ang)*car.rx;
+
+          const y =
+            car.cy+
+            Math.sin(car.ang)*car.ry;
+
+          car.trail.push({
+            x:x,
+            y:y
+          });
+
+          if(car.trail.length>12){
+            car.trail.shift();
+          }
+
+          for(
+            let j=0;
+            j<car.trail.length-1;
+            j++
+          ){
+
+            const alpha =
+              (j/car.trail.length)*.4;
+
+            ctx.beginPath();
+
+            ctx.strokeStyle =
+              car.red
+                ? "rgba(255,84,105,"+alpha+")"
+                : "rgba(200,255,77,"+alpha+")";
+
+            ctx.lineWidth=
+              car.size*.6;
+
+            ctx.moveTo(
+              car.trail[j].x,
+              car.trail[j].y
+            );
+
+            ctx.lineTo(
+              car.trail[j+1].x,
+              car.trail[j+1].y
+            );
+
+            ctx.stroke();
+
+          }
+
+          ctx.beginPath();
+
+          ctx.fillStyle =
+            car.red
+              ? "rgba(255,84,105,.9)"
+              : "rgba(200,255,77,.7)";
+
+          ctx.arc(
+            x,
+            y,
+            car.size,
+            0,
+            Math.PI*2
+          );
+
+          ctx.fill();
+
+        }
+
+        if(
+          !reduceMotion &&
+          t-lastLap>1200
+        ){
+
+          lapN=
+            (lapN+1)%57;
+
+          lastLap=t;
+
+          if(hudLap){
+
+            hudLap.textContent =
+              "lap " +
+              String(lapN+1)
+                .padStart(2,"0") +
+              " / 57";
+
+          }
+
+          if(lapN%4===0){
+
+            stratIdx=
+              (stratIdx+1)%
+              strategies.length;
+
+            if(hudStrategy){
+
+              hudStrategy.textContent =
+                "strategy: " +
+                strategies[stratIdx];
+
+            }
+
+          }
+
+        }
+
+        if(!reduceMotion){
+          requestAnimationFrame(draw);
+        }
+
+      }
+
+      if(hudLap){
+        hudLap.textContent =
+          "lap 01 / 57";
+      }
+
+      if(hudStrategy){
+        hudStrategy.textContent =
+          "strategy: computing";
+      }
+
+      draw(0);
+
+      let resizeTimer;
+
+      window.addEventListener(
+        "resize",
+        function(){
+
+          clearTimeout(resizeTimer);
+
+          resizeTimer =
+            setTimeout(
+              function(){
+
+                dims=fit(canvas);
+
+                ctx=dims.ctx;
+                W=dims.w;
+                H=dims.h;
+
+              },
+              120
+            );
+
+        }
+      );
+
+    }
+
+    runWhenVisible(canvas,start);
+
+  })();
+
 })();
-  
 </script>
 
 </body>
